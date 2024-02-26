@@ -17,7 +17,9 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"obj_controller","order":1,"path":"objects/obj_controller/obj_controller.yy",},
     {"name":"spr_background","order":2,"path":"sprites/spr_background/spr_background.yy",},
+    {"name":"fnt_gameover","order":1,"path":"fonts/fnt_gameover/fnt_gameover.yy",},
     {"name":"spr_block","order":1,"path":"sprites/spr_block/spr_block.yy",},
     {"name":"macros","order":1,"path":"scripts/macros/macros.yy",},
     {"name":"functions","order":2,"path":"scripts/functions/functions.yy",},
