@@ -1,5 +1,6 @@
 /// @description Render map
 
+total_action_points = 10; // The number of action points available at the start of the turn
 remaining_action_points = 10; // The amount of points that can be used by the player during each turn
 player_score = 0; // The score for the player
 lost = false; // If the player has lost the game
