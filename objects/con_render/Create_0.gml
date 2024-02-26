@@ -1,5 +1,10 @@
 /// @description Render map
 
+remaining_action_points = 10; // The amount of points that can be used by the player during each turn
+player_score = 0; // The score for the player
+lost = false; // If the player has lost the game
+won = false; // If the player has won the game
+
 layer_set_visible("Map",false);
 
 global.Map = ds_grid_create(MAP_W,MAP_H);

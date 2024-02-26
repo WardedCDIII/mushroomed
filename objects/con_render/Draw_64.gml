@@ -1,5 +1,8 @@
-/// @description Insert description here
+/// @description Draw GUI
 // You can write your code in this editor
+
+// Draw the background of the GUI
+draw_sprite(spr_gui_background, 0, 0, 0);
 
 draw_set_font(fnt_stats);
 draw_set_valign(fa_top);
@@ -23,3 +26,7 @@ if (won) {
 } else if (lost) {
 	draw_text(window_get_width() / 2, window_get_height() / 2, "Game Over");
 }
+
+
+
+
