@@ -20,7 +20,9 @@
     {"name":"spr_background","order":2,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"spr_selection","order":3,"path":"sprites/spr_selection/spr_selection.yy",},
     {"name":"spr_block","order":1,"path":"sprites/spr_block/spr_block.yy",},
+    {"name":"spr_tallcube","order":4,"path":"sprites/spr_tallcube/spr_tallcube.yy",},
     {"name":"macros","order":1,"path":"scripts/macros/macros.yy",},
     {"name":"functions","order":2,"path":"scripts/functions/functions.yy",},
+    {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
   ],
 }
