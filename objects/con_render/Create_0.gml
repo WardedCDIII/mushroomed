@@ -25,7 +25,7 @@ for(var tx=0; tx<MAP_W; tx++) {
 // Other variables
 hover = [-1,-1];
 selected = [-1,-1];
-
+temp = 0;
 
 
 

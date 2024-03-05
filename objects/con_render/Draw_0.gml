@@ -20,10 +20,8 @@ for(var tx = 0; tx<MAP_W; tx++) {
 		} else {
 			_tileZ = _tileData[TILE.Z];
 		}
-		//_tileZ = _tileData[TILE.Z];
-		if array_equals([tx,ty],selected) {
-			_tileZ += 2;	
-		}
+		
+		_tileZ += array_equals([tx,ty],selected)*2;
 		
 		if _tileIndex {
 			draw_sprite(spr_block,_tileIndex-1,_screenX,_screenY-_tileZ);
@@ -34,9 +32,6 @@ for(var tx = 0; tx<MAP_W; tx++) {
 			if _tileOcc {
 				draw_sprite(spr_tallcube,0,_screenX,_screenY+TILE_H-_tileZ-1);	
 			}
-			/*if tx == _mx and ty == _my {
-				
-			}*/
 		}
 	}
 }
