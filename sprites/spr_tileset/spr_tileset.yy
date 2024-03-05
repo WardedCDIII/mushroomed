@@ -4,7 +4,7 @@
   "name": "spr_tileset",
   "bbox_bottom": 31,
   "bbox_left": 32,
-  "bbox_right": 191,
+  "bbox_right": 223,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"08242414-9bcd-4a9d-b45b-70686281be11",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3776955-22d0-4eab-855c-a9b409ed50dd",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"72d916c0-3070-4f30-8f95-03dc5afaff1f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ca6544c4-4589-4874-91d2-3c8e158cf3d2","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"08242414-9bcd-4a9d-b45b-70686281be11","path":"sprites/spr_tileset/spr_tileset.yy",},},},"Disabled":false,"id":"0bd1d75b-62c6-4ea4-8c27-de5e9e8919ed","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e3776955-22d0-4eab-855c-a9b409ed50dd","path":"sprites/spr_tileset/spr_tileset.yy",},},},"Disabled":false,"id":"6826560e-56e5-46fa-acfd-2107023a769f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 192,
+  "width": 224,
 }
