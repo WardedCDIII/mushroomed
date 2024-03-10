@@ -8,9 +8,11 @@ won = false; // If the player has won the game
 
 layer_set_visible("Map",false);
 
+// Map grid
 global.Map = ds_grid_create(MAP_W,MAP_H);
-var _tileMap = layer_tilemap_get_id("Map")
+var _tileMap = layer_tilemap_get_id("Map");
 
+// Populate global.Map
 for(var tx=0; tx<MAP_W; tx++) {
 	for(var ty=0; ty<MAP_H; ty++) {
 		var _tileMapData = tilemap_get(_tileMap,tx,ty);
@@ -22,9 +24,7 @@ for(var tx=0; tx<MAP_W; tx++) {
 	}
 }
 
-
-
-
+// Other variables
 
 
 
