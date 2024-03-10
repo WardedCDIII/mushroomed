@@ -22,3 +22,30 @@ function roomToTileY(_x,_y){
 }
 
 #endregion
+#region Grid Util
+
+function validGridLocation(_coord) {
+	show_debug_message(_coord);
+	if _coord[0] < 0 or _coord[1] < 0 or _coord[0] >= MAP_W or _coord[1] >= MAP_H {
+		return false;	
+	}
+	var _tileData = global.Map[# _coord[0],_coord[1]];
+	var _spr = _tileData[TILE.SPRITE];
+	return _spr != 0;
+}
+
+#endregion
+#region Mob getters
+
+function isOccupied(_coord) {
+	var _mobData = global.Mobs[# _coord[0],_coord[1]];
+	var _spr = _mobData[MOB.SPRITE];
+	return _spr != 0;	
+}
+function getSprite(_coord) {
+	var _mobData = global.Mobs[# _coord[0],_coord[1]];
+	var _spr = _mobData[MOB.SPRITE];
+	return _spr;
+}
+
+#endregion

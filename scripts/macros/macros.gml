@@ -9,6 +9,10 @@
 
 enum TILE {
 	SPRITE = 0,
-	Z = 1,
-	OCC = 2
+	Z = 1
+}
+
+enum MOB {
+	SPRITE = 0,
+	Z = 1
 }
