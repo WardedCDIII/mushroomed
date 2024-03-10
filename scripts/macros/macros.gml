@@ -16,3 +16,8 @@ enum MOB {
 	SPRITE = 0,
 	Z = 1
 }
+
+#macro SPEEDS ds_map_create()
+ds_map_add(SPEEDS,0,0);
+ds_map_add(SPEEDS,1,3);
+ds_map_add(SPEEDS,2,4);

@@ -15,8 +15,17 @@ for(var tx = 0; tx<MAP_W; tx++) {
 		
 		_tileZ += array_equals(con_controller.selected,[tx,ty])*3;
 		
+		// Final draw
 		if _tileIndex {
+			// DRAW TILE ALWAYS FIRST
 			draw_sprite(spr_block,_tileIndex-1,_screenX,_screenY-_tileZ);
+			// Tile is selected
+			if not array_equals(con_controller.selected,[-1,-1]) {
+				if inSpeed(con_controller.selected,[tx,ty],getSpeed(con_controller.selected)) {
+					draw_sprite(spr_selection,1,_screenX,_screenY-_tileZ);	
+				}
+			}
+			// Draw mob
 			if isOccupied([tx,ty]) {
 				draw_sprite(spr_mobs,getSprite([tx,ty])-1,_screenX,_screenY+TILE_H-_tileZ-1);
 			}
