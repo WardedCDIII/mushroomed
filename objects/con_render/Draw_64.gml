@@ -5,39 +5,41 @@ draw_set_font(fnt_stats);
 draw_set_valign(fa_top);
 
 // Draw the background of the GUI
-draw_sprite(spr_gui_background, 0, 0, 0);
+draw_sprite_ext(spr_gui_background, 0, 0, 0, window_get_width() / sprite_get_width(spr_gui_background), window_get_height() / sprite_get_height(spr_gui_background), 0, c_white, 1);
 
 // Display the remaining turn points on the top left
 draw_set_halign(fa_left);
-draw_text(0, 0, remaining_action_points);
-draw_healthbar(24, 36, 36, 164, remaining_action_points * 10, c_black, c_navy, c_blue, 3, true, true);
+draw_text(28, 5, remaining_action_points);
+draw_healthbar(32, 36, 60, 232, remaining_action_points * 10, c_black, c_navy, c_blue, 3, true, true);
+
+// Display the score on the top right
+draw_set_halign(fa_right);
+draw_text(window_get_width() - 10, 10, "Score: " + string(player_score));
 
 // Draw player team's names, icons, and healthbars
+draw_set_font(fnt_names);
+draw_set_halign(fa_left);
 var toadstool_hp = 0;
 if (instance_exists(obj_toadstool)) {
 	toadstool_hp = obj_toadstool.hp;
 }
-draw_text(110, 0, "Toadstool");
-draw_healthbar(120, 36, 280, 48, toadstool_hp * 10, c_black, c_red, c_green, 0, true, true);
-draw_sprite(spr_gui_toadstool, 0, 275, 4);
+draw_healthbar(150, 85, 400, 115, toadstool_hp * 10, c_black, c_red, c_green, 0, true, true);
+draw_sprite(spr_gui_toadstool, 0, 150, 10);
+draw_text(220, 10, "Toadstool");
 var inkcap_hp = 0;
 if (instance_exists(obj_inkcap)) {
 	inkcap_hp = obj_inkcap.hp;
 }
-draw_text(315, 0, "Inkcap");
-draw_healthbar(315, 36, 475, 48, inkcap_hp * 10, c_black, c_red, c_green, 0, true, true);
-draw_sprite(spr_gui_inkcap, 0, 435, 4);
+draw_healthbar(500, 85, 750, 115, inkcap_hp * 10, c_black, c_red, c_green, 0, true, true);
+draw_sprite(spr_gui_inkcap, 0, 500, 10);
+draw_text(570, 10, "Inkcap");
 var veiledlady_hp = 0;
 if (instance_exists(obj_veiledlady)) {
 	veiledlady_hp = obj_veiledlady.hp;
 }
-draw_text(500, 0, "Veiledlady");
-draw_healthbar(500, 36, 660, 48, veiledlady_hp * 10, c_black, c_red, c_green, 0, true, true);
-draw_sprite(spr_gui_veiledlady, 0, 675, 4);
-
-// Display the score on the top right
-draw_set_halign(fa_right);
-draw_text(window_get_width(), 0, player_score);
+draw_healthbar(850, 85, 1100, 115, veiledlady_hp * 10, c_black, c_red, c_green, 0, true, true);
+draw_sprite(spr_gui_veiledlady, 0, 850, 10);
+draw_text(920, 10, "Veiledlady");
 
 // Won and lost text
 draw_set_valign(fa_middle);
