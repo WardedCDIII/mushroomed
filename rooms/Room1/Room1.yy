@@ -9,6 +9,7 @@
   "instanceCreationOrder": [
     {"name":"inst_7189912","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_6CF2F996","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_7189912","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd": false,
   "layers": [

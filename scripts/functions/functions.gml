@@ -39,34 +39,24 @@ function validGridLocation(_coord) {
 
 function isOccupied(_coord) {
 	var _mobData = global.Mobs[# _coord[0],_coord[1]];
-	var _spr = _mobData[MOB.SPRITE];
-	return _spr != 0;	
+	return _mobData != undefined;
 }
 function getSprite(_coord) {
 	var _mobData = global.Mobs[# _coord[0],_coord[1]];
-	var _spr = _mobData[MOB.SPRITE];
-	return _spr;
+	return object_get_sprite(_mobData.object_index);
 }
 function getSpeed(_coord) {
-	var	_mobData = global.Mobs[# _coord[0],_coord[1]];
-	var _spr = _mobData[MOB.SPRITE];
-	return 3;
-	//return ds_map_find_value(SPEEDS, _spr);
+	var _mobData = global.Mobs[# _coord[0],_coord[1]];
+	with (_mobData) { return spd; }
 }
 function inSpeed(_coord,_target,spd) {
 	return abs(_coord[0]-_target[0]) <= spd and abs(_coord[1]-_target[1]) <= spd;	
 }
 function moveMob(_coord1,_coord2) {
 	var _mobData1 = global.Mobs[# _coord1[0],_coord1[1]];
-	var _mobData2 = global.Mobs[# _coord2[0],_coord2[1]];
-	var _spr = _mobData1[MOB.SPRITE];
-	var _z = _mobData1[MOB.Z];
-	var _emptyMob = [0,0];
-	var _newMob = [-1,0];
-	_newMob[MOB.SPRITE] = _spr;
-	_newMob[MOB.Z] = _z;
-	global.Mobs[# _coord1[0],_coord1[1]] = _emptyMob;
-	global.Mobs[# _coord2[0],_coord2[1]] = _newMob;
+	var _temp = _mobData1;
+	global.Mobs[# _coord1[0],_coord1[1]] = undefined;
+	global.Mobs[# _coord2[0],_coord2[1]] = _temp;
 }
 
 #endregion

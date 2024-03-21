@@ -1,7 +1,7 @@
 /// @description Draw GUI
 // You can write your code in this editor
 
-draw_set_font(fnt_stats);
+/*draw_set_font(fnt_stats);
 draw_set_valign(fa_top);
 
 // Draw the background of the GUI
@@ -48,7 +48,7 @@ if (won) {
 	draw_text(window_get_width() / 2, window_get_height() / 2, "You Win!");
 } else if (lost) {
 	draw_text(window_get_width() / 2, window_get_height() / 2, "Game Over");
-}
+}*/
 
 
 

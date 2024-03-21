@@ -10,10 +10,13 @@ for(var tx=0; tx<MAP_W; tx++) {
 	for(var ty=0; ty<MAP_H; ty++) {
 		var _tileMapData = tilemap_get(_tileMap,tx,ty);
 		_tileMapData = tile_get_index(_tileMapData);
-		var _tile = [-1, 0];
-		_tile[MOB.SPRITE] = _tileMapData;
-		_tile[MOB.Z] = 0;
-		global.Mobs[# tx, ty] = _tile;
+		if _tileMapData == 1 {
+			var _mob = instance_create_layer(tileToRoomX(tx,ty),tileToRoomY(tx,ty),"Instances",obj_inkcap);
+			global.Mobs[# tx,ty] = _mob;
+		} else {
+			global.Mobs[# tx,ty] = undefined;	
+		}
+		
 	}
 }
 
@@ -21,7 +24,8 @@ for(var tx=0; tx<MAP_W; tx++) {
 selected = [-1,-1];
 hover = [-1,-1];
 
-
+// Other
+turn = 0;
 
 
 

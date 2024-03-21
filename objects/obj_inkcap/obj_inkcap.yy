@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_tallcube",
+    "path": "sprites/spr_tallcube/spr_tallcube.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -27,7 +27,8 @@ for(var tx = 0; tx<MAP_W; tx++) {
 			}
 			// Draw mob
 			if isOccupied([tx,ty]) {
-				draw_sprite(spr_mobs,getSprite([tx,ty])-1,_screenX,_screenY+TILE_H-_tileZ-1);
+				var _mob = global.Mobs[# tx,ty];
+				draw_sprite(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1);
 			}
 		}
 	}

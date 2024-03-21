@@ -7,6 +7,8 @@
 #macro ROOM_W 384
 #macro ROOM_H 256
 
+#macro ENEMY_INDEX 2
+
 enum TILE {
 	SPRITE = 0,
 	Z = 1
