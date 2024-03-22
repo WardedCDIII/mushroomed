@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_veiledlady",
+    "path": "sprites/spr_veiledlady/spr_veiledlady.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

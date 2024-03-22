@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_tallcube",
-    "path": "sprites/spr_tallcube/spr_tallcube.yy",
+    "name": "spr_inkcap",
+    "path": "sprites/spr_inkcap/spr_inkcap.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -50,7 +50,7 @@ function getSpeed(_coord) {
 	with (_mobData) { return spd; }
 }
 function inSpeed(_coord,_target,spd) {
-	return abs(_coord[0]-_target[0]) <= spd and abs(_coord[1]-_target[1]) <= spd;	
+	return distance(_coord,_target) <= spd;	
 }
 function moveMob(_coord1,_coord2) {
 	var _mobData1 = global.Mobs[# _coord1[0],_coord1[1]];

@@ -10,11 +10,12 @@ for(var tx=0; tx<MAP_W; tx++) {
 	for(var ty=0; ty<MAP_H; ty++) {
 		var _tileMapData = tilemap_get(_tileMap,tx,ty);
 		_tileMapData = tile_get_index(_tileMapData);
-		if _tileMapData == 1 {
-			var _mob = instance_create_layer(tileToRoomX(tx,ty),tileToRoomY(tx,ty),"Instances",obj_inkcap);
-			global.Mobs[# tx,ty] = _mob;
+		if _tileMapData == 0 {
+			global.Mobs[# tx,ty] = undefined;
+			
 		} else {
-			global.Mobs[# tx,ty] = undefined;	
+			var _mob = instance_create_layer(tileToRoomX(tx,ty),tileToRoomY(tx,ty),"Instances",getObjectFromTilemap(_tileMapData));
+			global.Mobs[# tx,ty] = _mob;
 		}
 		
 	}

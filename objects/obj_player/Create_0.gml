@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description 
 
 hp = 10;
 atk = 1;
