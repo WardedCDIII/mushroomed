@@ -15,6 +15,10 @@ if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 		else if array_equals(hover,selected) {
 			selected = [-1,-1];
 		}
+		// Clicked tile is another player character
+		else if isPlayer(hover) {
+			selected = hover;	
+		}
 		// Clicked tile is different than selected tile
 		else {
 			switch mode {

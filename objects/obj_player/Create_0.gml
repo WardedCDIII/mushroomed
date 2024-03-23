@@ -1,6 +1,6 @@
 /// @description 
 
-hp = 10;
+hp = 3;
 atk = 1;
 spd = 2;
 range = 4;
