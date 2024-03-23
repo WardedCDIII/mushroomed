@@ -31,7 +31,7 @@ hover = [-1,-1];
 
 // Other
 turn = 0;
-
+mode = 0; // 0 -> move	 1 -> attack
 
 
 

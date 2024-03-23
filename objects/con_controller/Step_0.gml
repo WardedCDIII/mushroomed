@@ -4,6 +4,7 @@ var _mx = roomToTileX(mouse_x,mouse_y);
 var _my = roomToTileY(mouse_x,mouse_y);
 hover = [_mx,_my];
 
+// Moving
 if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 	if validGridLocation(hover) {
 		// No tile is previously selected
@@ -16,19 +17,27 @@ if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 		}
 		// Clicked tile is different than selected tile
 		else {
-			// move is valid and unobstructed
-			if isOccupied(selected) and not isOccupied(hover) {
-				if inSpeed(selected,hover,getSpeed(selected)) {
-					moveMob(selected,hover);
-					selected = [-1,-1];
-				}
+			switch mode {
+				case 0:	// Moving
+					if isOccupied(selected) and not isOccupied(hover) {
+						if inSpeed(selected,hover,getSpeed(selected)) {
+							moveMob(selected,hover);
+							selected = [-1,-1];
+						}
+					}
+				break;
+				case 1: // Attacking
+					if isOccupied(hover) and inSpeed(selected,hover,getRange(selected)) {
+						attackMob(selected,hover);
+						selected = [-1,-1];
+					}
 			}
+			// move is valid and unobstructed
 		}
 	} else {
 		selected = [-1,-1];
 	}
 }
-
 
 
 
