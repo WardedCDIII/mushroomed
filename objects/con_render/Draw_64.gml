@@ -1,7 +1,15 @@
-/// @description Draw GUI
-// You can write your code in this editor
+/// @description
+var remaining_action_points = 0
 
-/*draw_set_font(fnt_stats);
+if not array_equals(con_controller.selected,[-1,-1]) {
+	var _selected = global.Mobs[# con_controller.selected[0],con_controller.selected[1]];
+	with _selected {
+		remaining_action_points = ap;
+	}
+}
+
+
+draw_set_font(fnt_stats);
 draw_set_valign(fa_top);
 
 // Draw the background of the GUI
@@ -10,7 +18,7 @@ draw_sprite_ext(spr_gui_background, 0, 0, 0, window_get_width() / sprite_get_wid
 // Display the remaining turn points on the top left
 draw_set_halign(fa_left);
 draw_text(28, 5, remaining_action_points);
-draw_healthbar(32, 36, 60, 232, remaining_action_points * 10, c_black, c_navy, c_blue, 3, true, true);
+draw_healthbar(32, 36, 60, 232, remaining_action_points * 33.333, c_black, c_navy, c_blue, 3, true, true);
 
 // Display the score on the top right
 draw_set_halign(fa_right);
@@ -48,7 +56,7 @@ if (won) {
 	draw_text(window_get_width() / 2, window_get_height() / 2, "You Win!");
 } else if (lost) {
 	draw_text(window_get_width() / 2, window_get_height() / 2, "Game Over");
-}*/
+}
 
 
 

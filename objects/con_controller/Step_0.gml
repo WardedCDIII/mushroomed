@@ -4,10 +4,10 @@ var _mx = roomToTileX(mouse_x,mouse_y);
 var _my = roomToTileY(mouse_x,mouse_y);
 hover = [_mx,_my];
 
-if mouse_check_button_pressed(mb_left) {
+if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 	if validGridLocation(hover) {
 		// No tile is previously selected
-		if array_equals(selected,[-1,-1]) {
+		if array_equals(selected,[-1,-1]) and isPlayer(hover) {
 			if isOccupied(hover) {selected = hover;}	
 		}
 		// Clicked tile is same as selected tile

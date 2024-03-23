@@ -16,6 +16,10 @@ for(var tx=0; tx<MAP_W; tx++) {
 		} else {
 			var _mob = instance_create_layer(tileToRoomX(tx,ty),tileToRoomY(tx,ty),"Instances",getObjectFromTilemap(_tileMapData));
 			global.Mobs[# tx,ty] = _mob;
+			with _mob {
+				gx = tx;
+				gy = ty;
+			}
 		}
 		
 	}
