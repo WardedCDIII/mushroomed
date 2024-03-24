@@ -18,7 +18,7 @@ draw_sprite_ext(spr_gui_background, 0, 0, 0, window_get_width() / sprite_get_wid
 // Display the remaining turn points on the top left
 draw_set_halign(fa_left);
 draw_text(28, 5, remaining_action_points);
-draw_healthbar(32, 36, 60, 232, remaining_action_points * 33.333, c_black, c_navy, c_blue, 3, true, true);
+draw_healthbar(32, 36, 60, 232, remaining_action_points * 50, c_black, c_navy, c_blue, 3, true, true);
 
 // Display the score on the top right
 draw_set_halign(fa_right);

@@ -15,9 +15,8 @@ if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 		else if array_equals(hover,selected) {
 			if mode == 2 and isPlayer(hover){
 				with global.Mobs[# hover[0],hover[1]] {
-					if ap > 0 {
-						hp += 1;
-						ap -= 1;
+					if ap > 0 and not healed{
+						heal();
 					}
 				}
 			}
