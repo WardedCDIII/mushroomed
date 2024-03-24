@@ -13,6 +13,14 @@ if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 		}
 		// Clicked tile is same as selected tile
 		else if array_equals(hover,selected) {
+			if mode == 2 and isPlayer(hover){
+				with global.Mobs[# hover[0],hover[1]] {
+					if ap > 0 {
+						hp += 1;
+						ap -= 1;
+					}
+				}
+			}
 			selected = [-1,-1];
 		}
 		// Clicked tile is another player character
@@ -35,6 +43,7 @@ if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 						attackMob(selected,hover);
 						selected = [-1,-1];
 					}
+				break;
 			}
 			// move is valid and unobstructed
 		}
