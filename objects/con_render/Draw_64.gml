@@ -31,26 +31,27 @@ var toadstool_hp = 0;
 if (instance_exists(obj_toadstool)) {
 	toadstool_hp = obj_toadstool.hp;
 }
-draw_healthbar(150, 85, 400, 115, toadstool_hp * 10, c_black, c_red, c_green, 0, true, true);
+draw_healthbar(150, 85, 400, 115, toadstool_hp * 33.33, c_black, c_red, c_green, 0, true, true);
 draw_sprite(spr_gui_toadstool, 0, 150, 10);
 draw_text(220, 10, "Toadstool");
 var inkcap_hp = 0;
 if (instance_exists(obj_inkcap)) {
 	inkcap_hp = obj_inkcap.hp;
 }
-draw_healthbar(500, 85, 750, 115, inkcap_hp * 10, c_black, c_red, c_green, 0, true, true);
+draw_healthbar(500, 85, 750, 115, inkcap_hp * 33.33, c_black, c_red, c_green, 0, true, true);
 draw_sprite(spr_gui_inkcap, 0, 500, 10);
 draw_text(570, 10, "Inkcap");
 var veiledlady_hp = 0;
 if (instance_exists(obj_veiledlady)) {
 	veiledlady_hp = obj_veiledlady.hp;
 }
-draw_healthbar(850, 85, 1100, 115, veiledlady_hp * 10, c_black, c_red, c_green, 0, true, true);
+draw_healthbar(850, 85, 1100, 115, veiledlady_hp * 33.33, c_black, c_red, c_green, 0, true, true);
 draw_sprite(spr_gui_veiledlady, 0, 850, 10);
 draw_text(920, 10, "Veiledlady");
 
 // Won and lost text
 draw_set_valign(fa_middle);
+draw_set_halign(fa_center);
 draw_set_font(fnt_gameover);
 if (won) {
 	draw_text(window_get_width() / 2, window_get_height() / 2, "You Win!");
@@ -58,6 +59,13 @@ if (won) {
 	draw_text(window_get_width() / 2, window_get_height() / 2, "Game Over");
 }
 
+// Enemy health
+var hover = con_controller.hover;
+if validGridLocation(hover) and not isPlayer(hover) and isOccupied(hover) {
+	draw_set_font(fnt_stats);
+	draw_set_halign(fa_right);
+	draw_text(window_get_width()-10,100,"Health: "+string(getHp(hover)));
+}
 
 
 

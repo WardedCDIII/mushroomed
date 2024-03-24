@@ -69,6 +69,13 @@ function getRange(_coord) {
 		}
 	}	
 }
+function getHp(_coord) {
+	var _mob = global.Mobs[# _coord[0],_coord[1]];
+	if not instance_exists(_mob) { return 0; }
+	with _mob {
+		return hp;	
+	}
+}
 function inSpeed(_coord,_target,spd) {
 	if array_equals(_coord,_target) { return false; }
 	return distance(_coord,_target) <= spd and validGridLocation(_coord);	
