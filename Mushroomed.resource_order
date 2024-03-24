@@ -19,6 +19,7 @@
   "ResourceOrderSettings": [
     {"name":"spr_gui_veiledlady","order":6,"path":"sprites/spr_gui_veiledlady/spr_gui_veiledlady.yy",},
     {"name":"fnt_names","order":2,"path":"fonts/fnt_names/fnt_names.yy",},
+    {"name":"obj_modebutton","order":8,"path":"objects/obj_modebutton/obj_modebutton.yy",},
     {"name":"obj_toadstool","order":3,"path":"objects/obj_toadstool/obj_toadstool.yy",},
     {"name":"getObjectFromTilemap","order":3,"path":"scripts/getObjectFromTilemap/getObjectFromTilemap.yy",},
     {"name":"spr_enemy","order":8,"path":"sprites/spr_enemy/spr_enemy.yy",},
@@ -26,6 +27,7 @@
     {"name":"fnt_debug","order":3,"path":"fonts/fnt_debug/fnt_debug.yy",},
     {"name":"fnt_gameover","order":1,"path":"fonts/fnt_gameover/fnt_gameover.yy",},
     {"name":"mobs","order":1,"path":"tilesets/mobs/mobs.yy",},
+    {"name":"spr_modebuttons","order":12,"path":"sprites/spr_modebuttons/spr_modebuttons.yy",},
     {"name":"spr_selection","order":3,"path":"sprites/spr_selection/spr_selection.yy",},
     {"name":"spr_mobs","order":5,"path":"sprites/spr_mobs/spr_mobs.yy",},
     {"name":"spr_block","order":1,"path":"sprites/spr_block/spr_block.yy",},
