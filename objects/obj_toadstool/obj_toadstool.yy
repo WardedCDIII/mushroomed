@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_toadstool",
+    "path": "sprites/spr_toadstool/spr_toadstool.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

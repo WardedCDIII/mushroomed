@@ -21,13 +21,20 @@ for(var tx = 0; tx<MAP_W; tx++) {
 			draw_sprite(spr_block,_tileIndex-1,_screenX,_screenY-_tileZ);
 			// Tile is selected
 			if not array_equals(con_controller.selected,[-1,-1]) {
-				if inSpeed(con_controller.selected,[tx,ty],getSpeed(con_controller.selected)) {
+				// Draw movement range
+				var mode = con_controller.mode;
+				if mode==0 and inSpeed(con_controller.selected,[tx,ty],getSpeed(con_controller.selected)) {
 					draw_sprite(spr_selection,1,_screenX,_screenY-_tileZ);	
 				}
+				else if mode==1 and inSpeed(con_controller.selected,[tx,ty],getRange(con_controller.selected)) {
+					draw_sprite(spr_selection,2,_screenX,_screenY-_tileZ);	
+				}
+				// Draw attack range
 			}
 			// Draw mob
 			if isOccupied([tx,ty]) {
-				draw_sprite(spr_mobs,getSprite([tx,ty])-1,_screenX,_screenY+TILE_H-_tileZ-1);
+				var _mob = global.Mobs[# tx,ty];
+				draw_sprite(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1);
 			}
 		}
 	}

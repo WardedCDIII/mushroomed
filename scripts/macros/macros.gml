@@ -7,17 +7,9 @@
 #macro ROOM_W 384
 #macro ROOM_H 256
 
+#macro MAX_AP 3
+
 enum TILE {
 	SPRITE = 0,
 	Z = 1
 }
-
-enum MOB {
-	SPRITE = 0,
-	Z = 1
-}
-
-#macro SPEEDS ds_map_create()
-ds_map_add(SPEEDS,0,0);
-ds_map_add(SPEEDS,1,3);
-ds_map_add(SPEEDS,2,4);

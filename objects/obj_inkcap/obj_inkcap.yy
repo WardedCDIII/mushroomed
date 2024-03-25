@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_inkcap",
+    "path": "sprites/spr_inkcap/spr_inkcap.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
