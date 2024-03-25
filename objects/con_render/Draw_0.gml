@@ -31,11 +31,31 @@ for(var tx = 0; tx<MAP_W; tx++) {
 				}
 				// Draw attack range
 			}
+			// Draw enemy range
+			if validGridLocation(con_controller.hover) and not isPlayer(con_controller.hover) {
+				if isOccupied(con_controller.hover) {
+					switch con_controller.mode {
+						case 0:
+							if inSpeed(con_controller.hover,[tx,ty],getSpeed(con_controller.hover)) {
+								draw_sprite(spr_selection,3,_screenX,_screenY-_tileZ);	
+							}
+						break;
+						case 1:
+							if inSpeed(con_controller.hover,[tx,ty],getRange(con_controller.hover)) {
+								draw_sprite(spr_selection,4,_screenX,_screenY-_tileZ);	
+							}
+						break;
+					}
+				}
+			}
 			// Draw mob
 			if isOccupied([tx,ty]) {
 				var _mob = global.Mobs[# tx,ty];
-				// Cell is selected
-				if array_equals([tx,ty],con_controller.selected){
+				// Draw selected mob transparent
+				if array_equals([tx,ty],con_controller.hover) and not array_equals(con_controller.selected,con_controller.hover) {
+					draw_sprite_ext(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1,1,1,0,c_white,0.65);
+				}
+				else if array_equals([tx,ty],con_controller.selected){
 					draw_sprite_ext(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1,1,1,0,c_white,0.65);
 				} else {
 					draw_sprite(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1);	
