@@ -1,4 +1,4 @@
-/// @description Draw tiles
+/// @description Draw Map
 
 var _tileData, _mobData, _screenX, _screenY, _tileIndex, _tileZ;
 
@@ -34,7 +34,12 @@ for(var tx = 0; tx<MAP_W; tx++) {
 			// Draw mob
 			if isOccupied([tx,ty]) {
 				var _mob = global.Mobs[# tx,ty];
-				draw_sprite(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1);
+				// Cell is selected
+				if array_equals([tx,ty],con_controller.selected){
+					draw_sprite_ext(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1,1,1,0,c_white,0.65);
+				} else {
+					draw_sprite(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1);	
+				}
 			}
 		}
 	}
