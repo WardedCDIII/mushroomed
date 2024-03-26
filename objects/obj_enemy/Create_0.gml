@@ -2,8 +2,8 @@
 
 hp = 2;
 atk = 1;
-range = 2;
-spd = 1.5;
+range = random_range(1,2);
+spd = random_range(1,3);
 moveType = closestPlayer;
 attackType = closest;
 ap = 100;
