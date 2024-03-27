@@ -1,4 +1,4 @@
-/// @description Render map
+/// @description Create map
 
 player_score = 0; // The score for the player
 lost = false; // If the player has lost the game

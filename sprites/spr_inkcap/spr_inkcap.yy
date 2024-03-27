@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_inkcap",
-  "bbox_bottom": 30,
-  "bbox_left": 4,
-  "bbox_right": 27,
+  "bbox_bottom": 28,
+  "bbox_left": 6,
+  "bbox_right": 24,
   "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b1a09b8a-7f71-443d-9a4e-2036b47fb935",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"173ba0cb-3698-4cc1-ab86-1dc843052f85",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"97c9b9bb-05bc-48f6-b516-06e8a8428130","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"27e6f01d-e799-4d35-b1c8-123e443a6905","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 7,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b1a09b8a-7f71-443d-9a4e-2036b47fb935","path":"sprites/spr_inkcap/spr_inkcap.yy",},},},"Disabled":false,"id":"1b1cbcba-82f1-4f26-aaf4-4b4b9fbf9edf","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"173ba0cb-3698-4cc1-ab86-1dc843052f85","path":"sprites/spr_inkcap/spr_inkcap.yy",},},},"Disabled":false,"id":"9a4da456-1af6-4776-8a52-7c2b3b3b6530","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
