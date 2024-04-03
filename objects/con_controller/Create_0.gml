@@ -19,6 +19,7 @@ for(var tx=0; tx<MAP_W; tx++) {
 			with _mob {
 				gx = tx;
 				gy = ty;
+				if not isPlayer([tx,ty]) {init();}
 			}
 		}
 		

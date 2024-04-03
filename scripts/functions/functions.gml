@@ -107,6 +107,17 @@ function attackMob(attacker,target) {
 		}
 	}
 }
+function isBeingAttacked(_coord) {
+		with obj_enemy {
+			var size = ds_list_size(attackList);
+			for(var i=0; i<size; i++) {
+				if array_equals(ds_list_find_value(attackList,i),_coord) {
+					return true;	
+				}
+			}
+		}
+	return false;
+}
 #endregion
 #region Enemy Movesets
 
@@ -159,24 +170,13 @@ function randomCell(_coord) {
 }
 #endregion
 #region Enemy attack sets
+// Attack sets will add attacking cells to the list
 
-function closest(_coord) {
-	var _dist = MAP_H*MAP_W;
-	var _dest = [0,0];
-	for(var tx=0; tx<MAP_W; tx++) {
-		for(var ty=0; ty<MAP_H; ty++) {
-			if isPlayer([tx,ty]) {
-				var _mob = global.Mobs[# tx,ty];
-				with _mob {
-					if distance([tx,ty],_coord) < _dist {
-						_dist = distance([tx,ty],_coord);
-						_dest = [tx,ty];
-					}
-				}
-			}
-		}
+function line(_coord,list) {
+	ds_list_clear(list);
+	for(var i=0; i < 4; i++) {
+		ds_list_add(list,[irandom(MAP_W),irandom(MAP_H)]);	
 	}
-	if inSpeed(_coord,_dest,getRange(_coord)) {
-		attackMob(_coord,_dest);
-	}
+	return list;
 }
+#endregion

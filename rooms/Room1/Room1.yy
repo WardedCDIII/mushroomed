@@ -29,9 +29,12 @@
 -5,-2147483648,1,2,-5,-2147483648,1,4,-5,-2147483648,-2,0,
 -10,-2147483648,1,3,-6,-2147483648,2,0,4,-13,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"mobs","path":"tilesets/mobs/mobs.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Map","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":8,"SerialiseWidth":12,"TileCompressedData":[
--6,5,-6,3,-6,5,-6,3,-6,5,-6,3,
--6,5,-6,3,-6,1,-6,4,-6,1,-6,4,
--6,1,-6,4,-6,1,-6,4,],"TileDataFormat":1,},"tilesetId":{"name":"tiles","path":"tilesets/tiles/tiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-6,5,-6,3,-2,5,-2,1,-2,5,-2,3,
+-2,2,-2,3,-2,5,-2,1,-2,5,-2,3,
+-2,2,-2,3,-6,5,-6,3,-6,1,-6,4,
+-2,1,-2,5,-2,1,-2,4,-2,1,-2,4,
+-2,1,-2,5,-2,1,-2,4,-2,1,-2,4,
+-6,1,-6,4,],"TileDataFormat":1,},"tilesetId":{"name":"tiles","path":"tilesets/tiles/tiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4278190080,"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
