@@ -174,8 +174,11 @@ function randomCell(_coord) {
 
 function line(_coord,list) {
 	ds_list_clear(list);
-	for(var i=0; i < 4; i++) {
-		ds_list_add(list,[irandom(MAP_W),irandom(MAP_H)]);	
+	for(var i=_coord[0]-1; i >= 0; i--) {
+		var cell = [i, _coord[1]];
+		if validGridLocation(cell) {
+			ds_list_add(list,[i,_coord[1]]);	
+		}
 	}
 	return list;
 }

@@ -28,9 +28,9 @@ reset = function() {
 move = function() {
 	moveType([gx,gy]);
 	moved = true;
+	ds_list_copy(attackList,attackType([gx,gy],attackList));
 }
 attack = function() {
-	ds_list_copy(attackList,attackType([gx,gy],attackList));
 	var size = ds_list_size(attackList);
 	for(var i=0; i < size; i++) {
 		var cell = ds_list_find_value(attackList,i);
