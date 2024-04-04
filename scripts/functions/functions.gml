@@ -118,6 +118,23 @@ function isBeingAttacked(_coord) {
 		}
 	return false;
 }
+function getClosest(_coord,player) {
+	var closest = _coord;
+	var dist = MAP_W*MAP_H;
+	for(var i=0; i < MAP_W; i++) {
+		for(var j=0; j < MAP_H; j++) {
+			if validGridLocation([i,j]) {
+				if isOccupied([i,j]) and isPlayer([i,j]) == player {
+					if distance(_coord,[i,j]) < dist { 
+						dist = distance(_coord,[i,j]);
+						closest = [i,j];
+					}
+				}
+			}
+		}
+	}	
+	return closest;
+}
 #endregion
 #region Enemy Movesets
 
@@ -170,14 +187,24 @@ function randomCell(_coord) {
 }
 #endregion
 #region Enemy attack sets
-// Attack sets will add attacking cells to the list
+// Attack sets will return ds_list populated with grid cells
 
 function line(_coord,list) {
 	ds_list_clear(list);
-	for(var i=_coord[0]-1; i >= 0; i--) {
-		var cell = [i, _coord[1]];
-		if validGridLocation(cell) {
-			ds_list_add(list,[i,_coord[1]]);	
+	// get closest player
+	var closest = getClosest(_coord,true);
+	var dir = [sign(closest[0]-_coord[0]),sign(closest[1]-_coord[1])];
+	var _x = _coord[0];
+	var _y = _coord[1];
+	show_debug_message(dir);
+	while validGridLocation([_x,_y]) {
+		if not array_equals([_x,_y],_coord) {
+			ds_list_add(list,[_x,_y]);
+		}
+		if dir[0] != 0 {
+			_x += dir[0];
+		} else {
+			_y += dir[1];
 		}
 	}
 	return list;

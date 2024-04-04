@@ -19,7 +19,6 @@ for(var tx=0; tx<MAP_W; tx++) {
 			with _mob {
 				gx = tx;
 				gy = ty;
-				if not isPlayer([tx,ty]) {init();}
 			}
 		}
 		
@@ -33,6 +32,11 @@ hover = [-1,-1];
 // Other
 turn = 0;
 mode = 0; // 0 -> move	 1 -> attack
+
+// Controller and renderer monitoring
+controller_done = true;
+render_done = false;
+initialized = false;
 
 
 

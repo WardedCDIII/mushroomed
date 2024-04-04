@@ -26,11 +26,13 @@ for(var tx = 0; tx<MAP_W; tx++) {
 			if not array_equals(con_controller.selected,[-1,-1]) {
 				// Draw movement range
 				var mode = con_controller.mode;
-				if mode==0 and inSpeed(con_controller.selected,[tx,ty],getSpeed(con_controller.selected)) {
-					draw_sprite(spr_selection,1,_screenX,_screenY-_tileZ);	
-				}
-				else if mode==1 and inSpeed(con_controller.selected,[tx,ty],getRange(con_controller.selected)) {
-					draw_sprite(spr_selection,2,_screenX,_screenY-_tileZ);	
+				if not isOccupied([tx,ty]) {
+					if mode==0 and inSpeed(con_controller.selected,[tx,ty],getSpeed(con_controller.selected)) {
+						draw_sprite(spr_selection,1,_screenX,_screenY-_tileZ);	
+					}
+					else if mode==1 and inSpeed(con_controller.selected,[tx,ty],getRange(con_controller.selected)) {
+						draw_sprite(spr_selection,2,_screenX,_screenY-_tileZ);	
+					}
 				}
 			}
 			// Draw mob

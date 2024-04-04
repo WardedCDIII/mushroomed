@@ -1,4 +1,13 @@
-/// @description Handle mouse clicks
+/// @description Handle mouse clicks and other setup
+
+// Initialize enemies once done mapping data
+if controller_done and render_done and not initialized {
+	initialized = true;
+	with obj_enemy {
+		init();	
+	}
+	
+}
 
 var _mx = roomToTileX(mouse_x,mouse_y);
 var _my = roomToTileY(mouse_x,mouse_y);

@@ -23,7 +23,7 @@ for(var tx=0; tx<MAP_W; tx++) {
 }
 
 // Other variables
-
+con_controller.render_done = true;
 
 
 
