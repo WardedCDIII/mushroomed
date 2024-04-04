@@ -1,11 +1,11 @@
 /// @description 
 
 hp = 2;
-atk = 1;
-range = random_range(1,2);
-spd = random_range(1,3);
+atk = 4;
+range = 3;
+spd = 0;
 moveType = closestPlayer;
-attackType = line;
+attackType = bishop;
 ap = 100;
 gx = -1;
 gy = -1;

@@ -48,6 +48,7 @@
     {"id":{"name":"mobs","path":"tilesets/mobs/mobs.yy",},},
     {"id":{"name":"spr_modebuttons","path":"sprites/spr_modebuttons/spr_modebuttons.yy",},},
     {"id":{"name":"spr_selection","path":"sprites/spr_selection/spr_selection.yy",},},
+    {"id":{"name":"enemyLogic","path":"scripts/enemyLogic/enemyLogic.yy",},},
     {"id":{"name":"spr_mobs","path":"sprites/spr_mobs/spr_mobs.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
     {"id":{"name":"obj_endturn","path":"objects/obj_endturn/obj_endturn.yy",},},
