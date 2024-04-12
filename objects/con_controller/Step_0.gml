@@ -56,7 +56,7 @@ if mouse_check_button_pressed(mb_left) and turn%2 == 0 {
 			// move is valid and unobstructed
 		}
 	} else {
-		selected = [-1,-1];
+		//selected = [-1,-1];
 	}
 }
 

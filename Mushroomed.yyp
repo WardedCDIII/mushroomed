@@ -34,6 +34,7 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"spr_modes","path":"sprites/spr_modes/spr_modes.yy",},},
     {"id":{"name":"spr_gui_veiledlady","path":"sprites/spr_gui_veiledlady/spr_gui_veiledlady.yy",},},
     {"id":{"name":"tiles","path":"tilesets/tiles/tiles.yy",},},
     {"id":{"name":"fnt_names","path":"fonts/fnt_names/fnt_names.yy",},},

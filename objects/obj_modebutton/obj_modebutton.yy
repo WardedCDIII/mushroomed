@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_modebuttons",
-    "path": "sprites/spr_modebuttons/spr_modebuttons.yy",
+    "name": "spr_modes",
+    "path": "sprites/spr_modes/spr_modes.yy",
   },
   "spriteMaskId": null,
   "visible": true,

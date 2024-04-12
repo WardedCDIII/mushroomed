@@ -31,7 +31,7 @@ hover = [-1,-1];
 
 // Other
 turn = 0;
-mode = 0; // 0 -> move	 1 -> attack
+mode = -1; // 0 -> move	 1 -> attack
 
 // Controller and renderer monitoring
 controller_done = true;

@@ -17,6 +17,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"spr_modes","order":14,"path":"sprites/spr_modes/spr_modes.yy",},
     {"name":"spr_gui_veiledlady","order":6,"path":"sprites/spr_gui_veiledlady/spr_gui_veiledlady.yy",},
     {"name":"fnt_names","order":2,"path":"fonts/fnt_names/fnt_names.yy",},
     {"name":"obj_modebutton","order":8,"path":"objects/obj_modebutton/obj_modebutton.yy",},

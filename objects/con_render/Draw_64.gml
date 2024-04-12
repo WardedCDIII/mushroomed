@@ -49,12 +49,6 @@ draw_healthbar(850, 85, 1100, 115, veiledlady_hp * 33.33, c_black, c_red, c_gree
 draw_sprite(spr_gui_veiledlady, 0, 850, 10);
 draw_text(920, 10, "Veiledlady");
 
-// Cycle text
-draw_set_font(fnt_debug);
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_text(295,1010,"Cycle Mode");
-
 // Won and lost text
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);

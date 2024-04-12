@@ -16,8 +16,8 @@
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"GUI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4452C235","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_endturn","path":"objects/obj_endturn/obj_endturn.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":35.0,"y":185.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_628F3F08","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_modebutton","path":"objects/obj_modebutton/obj_modebutton.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":105.0,"y":216.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4452C235","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_endturn","path":"objects/obj_endturn/obj_endturn.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":188.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_628F3F08","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_modebutton","path":"objects/obj_modebutton/obj_modebutton.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":81.0,"y":203.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7189912","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"con_render","path":"objects/con_render/con_render.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
@@ -25,9 +25,9 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Mobs","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":8,"SerialiseWidth":12,"TileCompressedData":[
 -22,-2147483648,1,0,-3,-2147483648,1,0,-3,-2147483648,1,4,
--13,-2147483648,1,0,-5,-2147483648,1,0,-3,-2147483648,3,1,
--2147483648,0,-5,-2147483648,-2,0,-10,-2147483648,1,0,-6,-2147483648,
--2,0,-13,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"mobs","path":"tilesets/mobs/mobs.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-13,-2147483648,3,0,-2147483648,3,-3,-2147483648,7,0,-2147483648,2,
+-2147483648,0,-2147483648,0,-5,-2147483648,-2,0,-10,-2147483648,1,0,
+-3,-2147483648,5,1,-2147483648,-2147483648,0,0,-13,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"mobs","path":"tilesets/mobs/mobs.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Map","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":8,"SerialiseWidth":12,"TileCompressedData":[
 -6,5,-6,3,-2,5,-2,1,-2,5,-2,3,
 -2,2,-2,3,-2,5,-2,1,-2,5,-2,3,
