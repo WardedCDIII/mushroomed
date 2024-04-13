@@ -11,3 +11,7 @@ function distance(_coord1,_coord2){
 function angle(_coord1,_coord2){
 	return -1
 }
+
+function magnitude(v) {
+	return sqrt(sqr(v[0])+sqr(v[1]));	
+}

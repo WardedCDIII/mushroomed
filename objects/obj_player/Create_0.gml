@@ -9,7 +9,7 @@ gx = -1;
 gy = -1;
 
 // Action points and other game controllers
-ap = 2;
+ap = MAX_AP;
 moved = false;
 attacked = false;
 healed = false;

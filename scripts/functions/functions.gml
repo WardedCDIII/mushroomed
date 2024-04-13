@@ -142,4 +142,20 @@ function getClosest(_coord,player) {
 	}	
 	return closest;
 }
+function getCellinRange(source,target,range) {
+	if distance(source,target) <= range {
+		return target;	
+	}
+	var v = [target[0]-source[0],target[1]-source[1]];
+	v = [(v[0])/magnitude(v),v[1]/magnitude(v)];
+	v = [source[0]+round(v[0]*range),source[1]+round(v[1]*range)];
+	while isOccupied(v) {
+		range -= 0.25;
+		var v = [target[0]-source[0],target[1]-source[1]];
+		v = [(v[0])/magnitude(v),v[1]/magnitude(v)];
+		v = [source[0]+round(v[0]*range),source[1]+round(v[1]*range)];
+	}
+	return v;
+	
+}
 #endregion

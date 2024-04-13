@@ -1,51 +1,11 @@
 #region Enemy Movesets
+// Will return cell to move to, but will not move the mob
+// All moves take in _coord of enemy
 
 function closestPlayer(_coord) {
-	var _dist = MAP_H*MAP_W;
-	var _dest = [0,0];
-	for(var tx=0; tx<MAP_W; tx++) {
-		for(var ty=0; ty<MAP_H; ty++) {
-			if isPlayer([tx,ty]) {
-				var _mob = global.Mobs[# tx,ty];
-				with _mob {
-					if distance([tx,ty],_coord) < _dist {
-						_dist = distance([tx,ty],_coord);
-						_dest = [tx,ty];
-					}
-				}
-			}
-		}
-	}
-	_dist = MAP_W*MAP_W;
-	var _cell = [gx,gy];
-	for(var tx=0; tx<MAP_W; tx++) {
-		for(var ty=0; ty<MAP_H; ty++) {
-			with global.Mobs[# _coord[0],_coord[1]] {
-				if inSpeed([gx,gy],[tx,ty],spd) and distance([tx,ty],_dest) < _dist and not isOccupied([tx,ty]) {
-					_dist = distance([tx,ty],_dest);
-					_cell = [tx,ty];
-				}
-			}
-		}
-	}
-	moveMob(_coord,_cell);
-}
-function randomCell(_coord) {
-	var _dest = _coord;
-	with global.Mobs[# _coord[0],_coord[1]] {
-		_iter = 0;
-		while true {
-			if _iter >= 50 { break; }
-			var _x = irandom(MAP_W);
-			var _y = irandom(MAP_H);
-			if inSpeed(_coord,[_x,_y],spd) and not isOccupied([_x,_y]){ 
-				_dest=[_x,_y];
-				break;
-			}
-			_iter++;
-		}
-	}
-	if not array_equals(_coord,_dest) { moveMob(_coord,_dest); }
+	var _closest = getClosest(_coord,true);
+	var _cell = getCellinRange(_coord,_closest,getSpeed(_coord));
+	return _cell;
 }
 #endregion
 #region Enemy attack sets

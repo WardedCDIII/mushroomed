@@ -1,9 +1,9 @@
 /// @description 
 
 hp = 2;
-atk = 4;
+atk = 0;
 range = 3;
-spd = 0;
+spd = 1;
 moveType = closestPlayer;
 attackType = bishop;
 ap = 100;
@@ -26,7 +26,9 @@ reset = function() {
 	attacked = false;
 }
 move = function() {
-	moveType([gx,gy]);
+	var cell = moveType([gx,gy]);
+	show_debug_message(cell);
+	moveMob([gx,gy],cell);
 	moved = true;
 	ds_list_copy(attackList,attackType([gx,gy],attackList));
 }
