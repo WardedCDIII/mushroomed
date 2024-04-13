@@ -37,6 +37,7 @@ function validGridLocation(_coord) {
 #region Mob getters and util
 
 function isOccupied(_coord) {
+	if not validGridLocation(_coord) { return true; }
 	var _mobData = global.Mobs[# _coord[0],_coord[1]];
 	return instance_exists(_mobData);
 }

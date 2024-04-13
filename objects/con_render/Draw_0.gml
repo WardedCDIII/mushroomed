@@ -37,20 +37,7 @@ for(var tx = 0; tx<MAP_W; tx++) {
 			}
 			// Draw mob
 			if isOccupied([tx,ty]) {
-				var _mob = global.Mobs[# tx,ty];
-				/*// Draw attack squares
-				if not isPlayer([tx,ty]) {
-					with _mob {
-						var listSize = ds_list_size(attackList);
-						for(var i=0; i < listSize; i++) {
-							var _val = ds_list_find_value(attackList,i);
-							var _ax = tileToRoomX(_val[0],_val[1]);
-							var _ay = tileToRoomY(_val[0],_val[1]);
-							draw_sprite(spr_selection,4,_ax,_ay-_tileZ);
-						}
-					}
-				}*/
-				
+				var _mob = global.Mobs[# tx,ty];				
 				// Draw selected mob transparent
 				if array_equals([tx,ty],con_controller.hover) and not array_equals(con_controller.selected,con_controller.hover) {
 					draw_sprite_ext(object_get_sprite(_mob.object_index),0,_screenX,_screenY+TILE_H-_tileZ-1,1,1,0,c_white,0.65);

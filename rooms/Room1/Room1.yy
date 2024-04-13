@@ -25,10 +25,10 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Mobs","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":8,"SerialiseWidth":12,"TileCompressedData":[
 -15,-2147483648,1,2,-6,-2147483648,1,0,-3,-2147483648,1,0,
--3,-2147483648,1,4,-13,-2147483648,3,0,-2147483648,0,-3,-2147483648,
-9,0,-2147483648,0,-2147483648,0,-2147483648,0,-2147483648,1,-3,-2147483648,
--2,0,-10,-2147483648,1,0,-3,-2147483648,5,0,-2147483648,-2147483648,
-0,0,-7,-2147483648,1,3,-5,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"mobs","path":"tilesets/mobs/mobs.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-3,-2147483648,3,4,-2147483648,5,-11,-2147483648,15,0,-2147483648,0,
+-2147483648,-2147483648,5,0,-2147483648,0,-2147483648,0,-2147483648,0,-2147483648,1,
+-3,-2147483648,-2,0,-10,-2147483648,1,0,-3,-2147483648,5,0,
+-2147483648,-2147483648,0,0,-7,-2147483648,1,3,-5,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"mobs","path":"tilesets/mobs/mobs.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Map","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":8,"SerialiseWidth":12,"TileCompressedData":[
 -6,5,-6,3,-2,5,-2,1,-2,5,-2,3,
 -2,2,-2,3,-2,5,-2,1,-2,5,-2,3,

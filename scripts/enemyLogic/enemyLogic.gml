@@ -5,6 +5,30 @@
 function closestPlayer(_coord) {
 	var _closest = getClosest(_coord,true);
 	var _cell = getCellinRange(_coord,_closest,getSpeed(_coord));
+	if isOccupied(_cell) { return _coord; }
+	return _cell;
+}
+function randomCell(_coord) {
+	var r = getSpeed(_coord);
+	var _cell = [irandom_range(_coord[0]-r,_coord[0]+r),irandom_range(_coord[1]-r,_coord[1]+r)];
+	while not validGridLocation(_cell) {
+		if between(_coord[0],0,MAP_W) and between(_coord[1],0,MAP_W) and isOccupied(_cell) {
+			_cell = [irandom_range(_coord[0]-r,_coord[0]+r),irandom_range(_coord[1]-r,_coord[1]+r)];
+		}
+	}
+	show_debug_message("R "+string(_cell));
+	return _cell;
+}
+function slide(_coord) {
+	var _closest = getClosest(_coord,true);
+	var i = irandom(1);
+	var _cell = _coord;
+	_cell[i] = _closest[i];
+	var n = _closest[i];
+	while not validGridLocation(_cell) or isOccupied(_cell){
+		n -= sign(_closest[i]-_coord[i]);
+		_cell[i] = _closest[i]
+	}
 	return _cell;
 }
 #endregion

@@ -15,3 +15,10 @@ function angle(_coord1,_coord2){
 function magnitude(v) {
 	return sqrt(sqr(v[0])+sqr(v[1]));	
 }
+
+function between(t,a,b) {
+	return (a <= t and b >= t);
+}
+function betweenE(t,a,b) {
+	return (a < t and b > t);	
+}
