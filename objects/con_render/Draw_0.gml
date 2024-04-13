@@ -31,13 +31,11 @@ for(var tx = 0; tx<MAP_W; tx++) {
 					if instance_exists(global.Mobs[# con_controller.selected[0],con_controller.selected[1]]) {
 						with global.Mobs[# con_controller.selected[0],con_controller.selected[1]] { atkd = attacked; }
 					}
-					if not atkd {
 					if mode==0 and inSpeed(con_controller.selected,[tx,ty],getSpeed(con_controller.selected)) {
 						draw_sprite(spr_selection,1,_screenX,_screenY-_tileZ);	
 					}
-					else if mode==1 and inSpeed(con_controller.selected,[tx,ty],getRange(con_controller.selected)) {
+					else if mode==1 and not atkd and inSpeed(con_controller.selected,[tx,ty],getRange(con_controller.selected)) {
 						draw_sprite(spr_selection,2,_screenX,_screenY-_tileZ);	
-					}
 					}
 				}
 			}
