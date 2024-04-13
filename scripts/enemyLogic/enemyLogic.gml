@@ -16,7 +16,6 @@ function randomCell(_coord) {
 			_cell = [irandom_range(_coord[0]-r,_coord[0]+r),irandom_range(_coord[1]-r,_coord[1]+r)];
 		}
 	}
-	show_debug_message("R "+string(_cell));
 	return _cell;
 }
 function slide(_coord) {
@@ -43,7 +42,6 @@ function rook(_coord,list) {
 	var dir = [sign(closest[0]-_coord[0]),sign(closest[1]-_coord[1])];
 	var _x = _coord[0];
 	var _y = _coord[1];
-	show_debug_message(dir);
 	while validGridLocation([_x,_y]) {
 		if not array_equals([_x,_y],_coord) {
 			ds_list_add(list,[_x,_y]);
@@ -62,13 +60,23 @@ function bishop(_coord,list) {
 	var dir = [sign(closest[0]-_coord[0]),sign(closest[1]-_coord[1])];
 	var _x = _coord[0];
 	var _y = _coord[1];
-	show_debug_message(dir);
 	while validGridLocation([_x,_y]) {
 		if not array_equals([_x,_y],_coord) {
 			ds_list_add(list,[_x,_y]);
 		}
 		_x += dir[0];
 		_y += dir[1];
+	}
+	return list;
+}
+function randomAttack(_coord,list) {
+	ds_list_clear(list);
+	var _cell = [0,0];
+	for(var i=0; i <= irandom(getAtk(_coord)+2); i++) {
+		_cell = randomCellInRange(_coord,getRange(_coord));
+		if validGridLocation(_cell) and not isOccupied(_cell) {
+			ds_list_add(list,_cell);	
+		}
 	}
 	return list;
 }

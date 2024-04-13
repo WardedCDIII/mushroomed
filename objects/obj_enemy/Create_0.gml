@@ -27,8 +27,7 @@ reset = function() {
 }
 move = function() {
 	var cell = moveType([gx,gy]);
-	show_debug_message(cell);
-	moveMob([gx,gy],cell);
+	if not isOccupied(cell) { moveMob([gx,gy],cell); }
 	moved = true;
 	ds_list_copy(attackList,attackType([gx,gy],attackList));
 }

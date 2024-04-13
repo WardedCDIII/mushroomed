@@ -1,5 +1,7 @@
 /// @description Create mob grid
 
+randomize();
+
 layer_set_visible("Mobs",false);
 // Create character grid global.Mobs
 global.Mobs = ds_grid_create(MAP_W,MAP_H);

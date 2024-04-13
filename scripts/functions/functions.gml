@@ -63,11 +63,7 @@ function getSpeed(_coord) {
 function getRange(_coord) {
 	var _mobData = global.Mobs[# _coord[0],_coord[1]];
 	with (_mobData) { 
-		if ap > 0 and not attacked {
-			return range; 
-		} else {
-			return 0;
-		}
+		return range;
 	}	
 }
 function getHp(_coord) {
@@ -158,5 +154,11 @@ function getCellinRange(source,target,range) {
 	}
 	return v;
 	
+}
+function randomCellInRange(_coord,range) {
+	var _x = irandom_range(_coord[0]-range,_coord[0]+range);
+	var _y = irandom_range(_coord[1]-range,_coord[1]+range)
+	var cell = [_x,_y];
+	return cell;
 }
 #endregion
