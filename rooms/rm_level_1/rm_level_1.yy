@@ -1,17 +1,17 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "Room1",
+  "name": "rm_level_1",
   "creationCodeFile": "",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,
   "instanceCreationOrder": [
-    {"name":"inst_6CF2F996","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_7189912","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_4452C235","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_628F3F08","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_7189912","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_6CF2F996","path":"rooms/rm_level_1/rm_level_1.yy",},
+    {"name":"inst_7189912","path":"rooms/rm_level_1/rm_level_1.yy",},
+    {"name":"inst_4452C235","path":"rooms/rm_level_1/rm_level_1.yy",},
+    {"name":"inst_628F3F08","path":"rooms/rm_level_1/rm_level_1.yy",},
+    {"name":"inst_7189912","path":"rooms/rm_level_1/rm_level_1.yy",},
   ],
   "isDnd": false,
   "layers": [
