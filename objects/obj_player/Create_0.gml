@@ -22,6 +22,7 @@ reset = function() {
 	healed = false;
 }
 heal = function() {
+	audio_play_sound(snd_heal, 2, false);
 	ap--;
 	hp = clamp(hp+1,0,max_hp);
 	healed = true;

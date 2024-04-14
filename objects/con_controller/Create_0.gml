@@ -1,6 +1,8 @@
 /// @description Create mob grid
 
 if (room == rm_level_1 || room = rm_level_2) {
+	audio_stop_sound(snd_splash_background);
+	audio_play_sound(snd_background, 1, true);
 	randomize();
 	
 	layer_set_visible("Mobs",false);
@@ -40,4 +42,6 @@ if (room == rm_level_1 || room = rm_level_2) {
 	controller_done = true;
 	render_done = false;
 	initialized = false;
+} else {
+	audio_play_sound(snd_splash_background, 1, true);
 }

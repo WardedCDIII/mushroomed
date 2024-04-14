@@ -36,7 +36,8 @@ attack = function() {
 	for(var i=0; i < size; i++) {
 		var cell = ds_list_find_value(attackList,i);
 		if isOccupied(cell) {
-			attackMob([gx,gy],cell);	
+			attackMob([gx,gy],cell);
+			audio_play_sound(snd_damage, 2, false);
 		}
 	}
 	attacked = true;

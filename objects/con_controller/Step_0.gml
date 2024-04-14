@@ -57,6 +57,7 @@ if (room == rm_level_1 || room = rm_level_2) {
 					case 1: // Attacking
 						if isOccupied(hover) and inSpeed(selected,hover,getRange(selected)) {
 							attackMob(selected,hover);
+							audio_play_sound(snd_hit, 2, false);
 							selected = [-1,-1];
 						}
 					break;
