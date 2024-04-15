@@ -47,6 +47,7 @@
     {"id":{"name":"getObjectFromTilemap","path":"scripts/getObjectFromTilemap/getObjectFromTilemap.yy",},},
     {"id":{"name":"snd_heal","path":"sounds/snd_heal/snd_heal.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
+    {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"con_controller","path":"objects/con_controller/con_controller.yy",},},
     {"id":{"name":"fnt_debug","path":"fonts/fnt_debug/fnt_debug.yy",},},
     {"id":{"name":"spr_actionpoint","path":"sprites/spr_actionpoint/spr_actionpoint.yy",},},

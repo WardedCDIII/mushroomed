@@ -28,6 +28,7 @@
     {"name":"getObjectFromTilemap","order":3,"path":"scripts/getObjectFromTilemap/getObjectFromTilemap.yy",},
     {"name":"snd_heal","order":2,"path":"sounds/snd_heal/snd_heal.yy",},
     {"name":"spr_enemy","order":8,"path":"sprites/spr_enemy/spr_enemy.yy",},
+    {"name":"spr_background","order":18,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"con_controller","order":2,"path":"objects/con_controller/con_controller.yy",},
     {"name":"fnt_debug","order":3,"path":"fonts/fnt_debug/fnt_debug.yy",},
     {"name":"spr_actionpoint","order":17,"path":"sprites/spr_actionpoint/spr_actionpoint.yy",},
