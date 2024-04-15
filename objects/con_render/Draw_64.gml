@@ -41,8 +41,8 @@ if (room == rm_level_1 || room == rm_level_2) {
 	if (instance_exists(obj_toadstool)) {
 		toadstool_hp = obj_toadstool.hp;
 		repeat (obj_toadstool.hp) {
-			draw_sprite(spr_health, 0, x_action, 40);
-			x_action += 64;
+			draw_sprite(spr_health, 0, x_action, 57);
+			x_action += 34;
 		}
 	}
 	draw_sprite(spr_gui_toadstool, 0, team_start, 20);
@@ -52,8 +52,8 @@ if (room == rm_level_1 || room == rm_level_2) {
 	if (instance_exists(obj_inkcap)) {
 		toadstool_hp = obj_inkcap.hp;
 		repeat (obj_inkcap.hp) {
-			draw_sprite(spr_health, 0, x_action, 40);
-			x_action += 64;
+			draw_sprite(spr_health, 0, x_action, 57);
+			x_action += 34;
 		}
 	}
 	draw_sprite(spr_gui_inkcap, 0, team_start + team_width, 20);
@@ -63,8 +63,8 @@ if (room == rm_level_1 || room == rm_level_2) {
 	if (instance_exists(obj_veiledlady)) {
 		toadstool_hp = obj_veiledlady.hp;
 		repeat (obj_veiledlady.hp) {
-			draw_sprite(spr_health, 0, x_action, 40);
-			x_action += 64;
+			draw_sprite(spr_health, 0, x_action, 57);
+			x_action += 34;
 		}
 	}
 	draw_sprite(spr_gui_veiledlady, 0, team_start + (team_width * 2), 20);
