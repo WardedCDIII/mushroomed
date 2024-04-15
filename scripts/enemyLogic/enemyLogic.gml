@@ -72,7 +72,7 @@ function bishop(_coord,list) {
 function randomAttack(_coord,list) {
 	ds_list_clear(list);
 	var _cell = [0,0];
-	for(var i=0; i <= irandom(getAtk(_coord)+2); i++) {
+	for(var i=0; i <= irandom(getAtk(_coord)+10); i++) {
 		_cell = randomCellInRange(_coord,getRange(_coord));
 		if validGridLocation(_cell) and not isOccupied(_cell) {
 			ds_list_add(list,_cell);	

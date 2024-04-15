@@ -1,4 +1,6 @@
 /// @description
+draw_set_alpha(1);
+
 if (room == rm_level_1 || room == rm_level_2) {
 	var remaining_action_points = 0
 

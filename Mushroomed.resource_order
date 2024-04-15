@@ -24,6 +24,7 @@
     {"name":"fnt_names","order":2,"path":"fonts/fnt_names/fnt_names.yy",},
     {"name":"fnt_splash","order":4,"path":"fonts/fnt_splash/fnt_splash.yy",},
     {"name":"obj_modebutton","order":8,"path":"objects/obj_modebutton/obj_modebutton.yy",},
+    {"name":"fnt_hit","order":5,"path":"fonts/fnt_hit/fnt_hit.yy",},
     {"name":"obj_toadstool","order":1,"path":"objects/obj_toadstool/obj_toadstool.yy",},
     {"name":"getObjectFromTilemap","order":3,"path":"scripts/getObjectFromTilemap/getObjectFromTilemap.yy",},
     {"name":"snd_heal","order":2,"path":"sounds/snd_heal/snd_heal.yy",},
@@ -53,6 +54,7 @@
     {"name":"functions","order":2,"path":"scripts/functions/functions.yy",},
     {"name":"obj_frog","order":1,"path":"objects/obj_frog/obj_frog.yy",},
     {"name":"spr_toadstool","order":10,"path":"sprites/spr_toadstool/spr_toadstool.yy",},
+    {"name":"obj_hitmarker","order":11,"path":"objects/obj_hitmarker/obj_hitmarker.yy",},
     {"name":"spr_inkcap","order":9,"path":"sprites/spr_inkcap/spr_inkcap.yy",},
     {"name":"spr_frog","order":16,"path":"sprites/spr_frog/spr_frog.yy",},
     {"name":"math","order":4,"path":"scripts/math/math.yy",},
@@ -63,5 +65,6 @@
     {"name":"spr_health","order":18,"path":"sprites/spr_health/spr_health.yy",},
     {"name":"spr_gui_background","order":3,"path":"sprites/spr_gui_background/spr_gui_background.yy",},
     {"name":"snd_splash_background","order":3,"path":"sounds/snd_splash_background/snd_splash_background.yy",},
+    {"name":"hitMarker","order":6,"path":"scripts/hitMarker/hitMarker.yy",},
   ],
 }

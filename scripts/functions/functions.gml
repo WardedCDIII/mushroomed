@@ -109,6 +109,7 @@ function attackMob(attacker,target) {
 			attacked = true;
 			ap--;
 		}
+		hitMarker(tileToRoomX(target[0],target[1]),tileToRoomY(target[0],target[1])-6,-1*atk);
 	}
 }
 function isBeingAttacked(_coord) {

@@ -1,7 +1,7 @@
 event_inherited();
 
 
-hp = 2;
+hp = 3;
 atk = 2;
 spd = 2.5;
 moveType = closestPlayer;

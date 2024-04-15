@@ -1,9 +1,10 @@
 /// @description Create mob grid
 
+randomize();
+
 if (room == rm_level_1 || room = rm_level_2) {
 	audio_stop_sound(snd_splash_background);
 	audio_play_sound(snd_background, 1, true);
-	randomize();
 	
 	layer_set_visible("Mobs",false);
 	// Create character grid global.Mobs

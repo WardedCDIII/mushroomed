@@ -43,6 +43,7 @@
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
     {"id":{"name":"fnt_splash","path":"fonts/fnt_splash/fnt_splash.yy",},},
     {"id":{"name":"obj_modebutton","path":"objects/obj_modebutton/obj_modebutton.yy",},},
+    {"id":{"name":"fnt_hit","path":"fonts/fnt_hit/fnt_hit.yy",},},
     {"id":{"name":"obj_toadstool","path":"objects/obj_toadstool/obj_toadstool.yy",},},
     {"id":{"name":"getObjectFromTilemap","path":"scripts/getObjectFromTilemap/getObjectFromTilemap.yy",},},
     {"id":{"name":"snd_heal","path":"sounds/snd_heal/snd_heal.yy",},},
@@ -75,6 +76,7 @@
     {"id":{"name":"obj_frog","path":"objects/obj_frog/obj_frog.yy",},},
     {"id":{"name":"con_render","path":"objects/con_render/con_render.yy",},},
     {"id":{"name":"spr_toadstool","path":"sprites/spr_toadstool/spr_toadstool.yy",},},
+    {"id":{"name":"obj_hitmarker","path":"objects/obj_hitmarker/obj_hitmarker.yy",},},
     {"id":{"name":"spr_inkcap","path":"sprites/spr_inkcap/spr_inkcap.yy",},},
     {"id":{"name":"spr_frog","path":"sprites/spr_frog/spr_frog.yy",},},
     {"id":{"name":"obj_fly","path":"objects/obj_fly/obj_fly.yy",},},
@@ -87,6 +89,7 @@
     {"id":{"name":"obj_inkcap","path":"objects/obj_inkcap/obj_inkcap.yy",},},
     {"id":{"name":"spr_gui_background","path":"sprites/spr_gui_background/spr_gui_background.yy",},},
     {"id":{"name":"snd_splash_background","path":"sounds/snd_splash_background/snd_splash_background.yy",},},
+    {"id":{"name":"hitMarker","path":"scripts/hitMarker/hitMarker.yy",},},
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
   ],
   "RoomOrderNodes": [
