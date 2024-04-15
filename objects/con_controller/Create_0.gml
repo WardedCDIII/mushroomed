@@ -37,7 +37,7 @@ if (room == rm_level_1 || room = rm_level_2) {
 
 	// Other
 	turn = 0;
-	mode = -1; // 0 -> move	 1 -> attack
+	mode = 0; // 0 -> move	 1 -> attack
 
 	// Controller and renderer monitoring
 	controller_done = true;

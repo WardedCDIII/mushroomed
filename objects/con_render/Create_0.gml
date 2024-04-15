@@ -6,6 +6,8 @@ if (room == rm_level_1 || room = rm_level_2) {
 	won = false; // If the player has won the game
 
 	layer_set_visible("Map",false);
+	layer_set_visible("GUI",true);
+	layer_set_visible("Instances",true);
 
 	// Map grid
 	global.Map = ds_grid_create(MAP_W,MAP_H);
