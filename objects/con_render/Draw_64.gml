@@ -17,39 +17,56 @@ if (room == rm_level_1 || room == rm_level_2) {
 	// Draw the background of the GUI
 	draw_sprite_ext(spr_gui_background, 0, 0, 0, window_get_width() / sprite_get_width(spr_gui_background), window_get_height() / sprite_get_height(spr_gui_background), 0, c_white, 1);
 
-	// Display the remaining turn points on the top left
-	draw_set_halign(fa_left);
-	draw_text(28, 5, remaining_action_points);
-	draw_healthbar(32, 36, 60, 232, remaining_action_points * 50, c_black, c_navy, c_blue, 3, true, true);
-
 	// Display the score on the top right
-	draw_set_halign(fa_right);
-	draw_text(window_get_width() - 10, 10, "Score: " + string(player_score));
+	draw_set_halign(fa_left);
+	draw_text(5, 5, "Score: " + string(player_score));
+
+	// Display the remaining turn points on the top left
+	draw_text(5, 35, "Action Points:");
+	var y_action = 160;
+	repeat (remaining_action_points) {
+		draw_sprite(spr_actionpoint, 0, 10, y_action);
+		y_action -= 64;
+	}
 
 	// Draw player team's names, icons, and healthbars
+	var team_start = (window_get_width() / 8) + 18;
+	var team_width = (window_get_width() - team_start) / 3;
 	draw_set_font(fnt_names);
 	draw_set_halign(fa_left);
-	var toadstool_hp = 0;
+	// Draw Toadstool
+	var x_action = team_start + 74;
 	if (instance_exists(obj_toadstool)) {
 		toadstool_hp = obj_toadstool.hp;
+		repeat (obj_toadstool.hp) {
+			draw_sprite(spr_health, 0, x_action, 40);
+			x_action += 64;
+		}
 	}
-	draw_healthbar(150, 85, 400, 115, toadstool_hp * 33.33, c_black, c_red, c_green, 0, true, true);
-	draw_sprite(spr_gui_toadstool, 0, 150, 10);
-	draw_text(220, 10, "Toadstool");
-	var inkcap_hp = 0;
+	draw_sprite(spr_gui_toadstool, 0, team_start, 20);
+	draw_text(team_start + 74, 10, "Toadstool");
+	// Draw Inkcap
+	var x_action = (team_start + (team_width)) + 74;
 	if (instance_exists(obj_inkcap)) {
-		inkcap_hp = obj_inkcap.hp;
+		toadstool_hp = obj_inkcap.hp;
+		repeat (obj_inkcap.hp) {
+			draw_sprite(spr_health, 0, x_action, 40);
+			x_action += 64;
+		}
 	}
-	draw_healthbar(500, 85, 750, 115, inkcap_hp * 33.33, c_black, c_red, c_green, 0, true, true);
-	draw_sprite(spr_gui_inkcap, 0, 500, 10);
-	draw_text(570, 10, "Inkcap");
-	var veiledlady_hp = 0;
+	draw_sprite(spr_gui_inkcap, 0, team_start + team_width, 20);
+	draw_text(team_start + team_width + 74, 10, "Inkcap");
+	// Draw Veiled Lady
+	var x_action = (team_start + (team_width * 2)) + 74;
 	if (instance_exists(obj_veiledlady)) {
-		veiledlady_hp = obj_veiledlady.hp;
+		toadstool_hp = obj_veiledlady.hp;
+		repeat (obj_veiledlady.hp) {
+			draw_sprite(spr_health, 0, x_action, 40);
+			x_action += 64;
+		}
 	}
-	draw_healthbar(850, 85, 1100, 115, veiledlady_hp * 33.33, c_black, c_red, c_green, 0, true, true);
-	draw_sprite(spr_gui_veiledlady, 0, 850, 10);
-	draw_text(920, 10, "Veiledlady");
+	draw_sprite(spr_gui_veiledlady, 0, team_start + (team_width * 2), 20);
+	draw_text((team_start + (team_width * 2)) + 74, 10, "Veiled Lady");
 
 	// Won and lost text
 	draw_set_valign(fa_middle);
@@ -72,6 +89,6 @@ if (room == rm_level_1 || room == rm_level_2) {
 	draw_set_font(fnt_splash);
 	draw_set_valign(fa_center);
 	draw_set_halign(fa_center);
-	draw_set_color(c_red);
+	draw_set_color(c_maroon);
 	draw_text(window_get_width()/2, 500, "Press Enter key to start");
 }
