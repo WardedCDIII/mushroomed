@@ -62,6 +62,7 @@
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
     {"id":{"name":"obj_endturn","path":"objects/obj_endturn/obj_endturn.yy",},},
     {"id":{"name":"spr_endbutton","path":"sprites/spr_endbutton/spr_endbutton.yy",},},
+    {"id":{"name":"obj_healthdisplay","path":"objects/obj_healthdisplay/obj_healthdisplay.yy",},},
     {"id":{"name":"fnt_stats","path":"fonts/fnt_stats/fnt_stats.yy",},},
     {"id":{"name":"spr_gui_inkcap","path":"sprites/spr_gui_inkcap/spr_gui_inkcap.yy",},},
     {"id":{"name":"spr_mobtileset","path":"sprites/spr_mobtileset/spr_mobtileset.yy",},},

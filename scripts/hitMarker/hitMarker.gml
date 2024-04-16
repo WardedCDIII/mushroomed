@@ -6,3 +6,10 @@ function hitMarker(_x,_y,_num){
 		num = _num;
 	}
 }
+
+function healthDisplay(_cell) {
+	var hd = instance_create_layer(0,0,"GUI",obj_healthdisplay);
+	with hd {
+		cell = _cell;	
+	}
+}

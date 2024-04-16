@@ -2,4 +2,4 @@
 // You can write your code in this editor
 
 event_inherited();
-spd = 1.5;
+spd = 2.5;

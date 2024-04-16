@@ -50,7 +50,6 @@ if (room == rm_level_1 || room == rm_level_2) {
 	// Draw Inkcap
 	var x_action = (team_start + (team_width)) + 74;
 	if (instance_exists(obj_inkcap)) {
-		toadstool_hp = obj_inkcap.hp;
 		repeat (obj_inkcap.hp) {
 			draw_sprite(spr_health, 0, x_action, 57);
 			x_action += 34;
@@ -61,7 +60,6 @@ if (room == rm_level_1 || room == rm_level_2) {
 	// Draw Veiled Lady
 	var x_action = (team_start + (team_width * 2)) + 74;
 	if (instance_exists(obj_veiledlady)) {
-		toadstool_hp = obj_veiledlady.hp;
 		repeat (obj_veiledlady.hp) {
 			draw_sprite(spr_health, 0, x_action, 57);
 			x_action += 34;
@@ -83,13 +81,11 @@ if (room == rm_level_1 || room == rm_level_2) {
 	// Enemy health
 	var hover = con_controller.hover;
 	if validGridLocation(hover) and not isPlayer(hover) and isOccupied(hover) {
-		draw_set_font(fnt_stats);
-		draw_set_halign(fa_right);
-		draw_text(window_get_width()-10,100,"Health: "+string(getHp(hover)));
+		if not instance_exists(obj_healthdisplay) { healthDisplay(hover); }
 	}
 } else {
 	draw_set_font(fnt_splash);
-	draw_set_valign(fa_center);
+	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
 	draw_set_color(c_maroon);
 	draw_text(window_get_width()/2, 500, "Press Enter key to start");
