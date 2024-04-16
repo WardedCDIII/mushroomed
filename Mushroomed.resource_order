@@ -49,6 +49,7 @@
     {"name":"spr_gui_inkcap","order":4,"path":"sprites/spr_gui_inkcap/spr_gui_inkcap.yy",},
     {"name":"spr_mobtileset","order":6,"path":"sprites/spr_mobtileset/spr_mobtileset.yy",},
     {"name":"macros","order":1,"path":"scripts/macros/macros.yy",},
+    {"name":"fnt_title","order":6,"path":"fonts/fnt_title/fnt_title.yy",},
     {"name":"spr_veiledlady","order":7,"path":"sprites/spr_veiledlady/spr_veiledlady.yy",},
     {"name":"rm_splash","order":1,"path":"rooms/rm_splash/rm_splash.yy",},
     {"name":"spr_gui_toadstool","order":5,"path":"sprites/spr_gui_toadstool/spr_gui_toadstool.yy",},

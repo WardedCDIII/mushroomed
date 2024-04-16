@@ -69,6 +69,7 @@
     {"id":{"name":"spr_gui_inkcap","path":"sprites/spr_gui_inkcap/spr_gui_inkcap.yy",},},
     {"id":{"name":"spr_mobtileset","path":"sprites/spr_mobtileset/spr_mobtileset.yy",},},
     {"id":{"name":"macros","path":"scripts/macros/macros.yy",},},
+    {"id":{"name":"fnt_title","path":"fonts/fnt_title/fnt_title.yy",},},
     {"id":{"name":"spr_veiledlady","path":"sprites/spr_veiledlady/spr_veiledlady.yy",},},
     {"id":{"name":"rm_splash","path":"rooms/rm_splash/rm_splash.yy",},},
     {"id":{"name":"snd_hit","path":"sounds/snd_hit/snd_hit.yy",},},

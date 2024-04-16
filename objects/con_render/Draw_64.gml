@@ -87,6 +87,8 @@ if (room == rm_level_1 || room == rm_level_2) {
 	draw_set_font(fnt_splash);
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
-	draw_set_color(c_maroon);
-	draw_text(window_get_width()/2, 500, "Press Enter key to start");
+	draw_set_color(c_white);
+	draw_text(window_get_width()/2, 650, "Press Enter key to start");
+	draw_set_font(fnt_title);
+	draw_text(window_get_width()/2, 400, "Mushroomed");
 }
