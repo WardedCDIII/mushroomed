@@ -17,12 +17,7 @@ if num < 0 {
 	color = c_ltgray;
 }
 
-draw_set_alpha(a);
-draw_set_color(c_white);
-draw_text(x-0.5,y-0.5,text);
-draw_text(x+0.5,y+0.5,text);
-draw_set_color(color);
-draw_text(x,y,text);
+draw_text_color(x,y,text,c_white,color,color,c_black,a);
 	
 
 
