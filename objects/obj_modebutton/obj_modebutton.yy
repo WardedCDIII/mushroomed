@@ -4,6 +4,8 @@
   "name": "obj_modebutton",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -28,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_modebuttons",
-    "path": "sprites/spr_modebuttons/spr_modebuttons.yy",
+    "name": "spr_modes",
+    "path": "sprites/spr_modes/spr_modes.yy",
   },
   "spriteMaskId": null,
   "visible": true,

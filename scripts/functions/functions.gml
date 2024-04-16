@@ -37,6 +37,7 @@ function validGridLocation(_coord) {
 #region Mob getters and util
 
 function isOccupied(_coord) {
+	if not validGridLocation(_coord) { return true; }
 	var _mobData = global.Mobs[# _coord[0],_coord[1]];
 	return instance_exists(_mobData);
 }
@@ -62,11 +63,7 @@ function getSpeed(_coord) {
 function getRange(_coord) {
 	var _mobData = global.Mobs[# _coord[0],_coord[1]];
 	with (_mobData) { 
-		if ap > 0 and not attacked {
-			return range; 
-		} else {
-			return 0;
-		}
+		return range;
 	}	
 }
 function getHp(_coord) {
@@ -75,6 +72,13 @@ function getHp(_coord) {
 	with _mob {
 		return hp;	
 	}
+}
+function getAtk(_coord) {
+	var _mob = global.Mobs[# _coord[0],_coord[1]];
+	if not instance_exists(_mob) { return 0; }
+	with _mob {
+		return atk;	
+	}	
 }
 function inSpeed(_coord,_target,spd) {
 	if array_equals(_coord,_target) { return false; }
@@ -105,78 +109,57 @@ function attackMob(attacker,target) {
 			attacked = true;
 			ap--;
 		}
+		hitMarker(tileToRoomX(target[0],target[1]),tileToRoomY(target[0],target[1])-6,-1*atk);
 	}
 }
-#endregion
-#region Enemy Movesets
-
-function closestPlayer(_coord) {
-	var _dist = MAP_H*MAP_W;
-	var _dest = [0,0];
-	for(var tx=0; tx<MAP_W; tx++) {
-		for(var ty=0; ty<MAP_H; ty++) {
-			if isPlayer([tx,ty]) {
-				var _mob = global.Mobs[# tx,ty];
-				with _mob {
-					if distance([tx,ty],_coord) < _dist {
-						_dist = distance([tx,ty],_coord);
-						_dest = [tx,ty];
+function isBeingAttacked(_coord) {
+		with obj_enemy {
+			var size = ds_list_size(attackList);
+			for(var i=0; i<size; i++) {
+				if array_equals(ds_list_find_value(attackList,i),_coord) {
+					return true;	
+				}
+			}
+		}
+	return false;
+}
+function getClosest(_coord,player) {
+	var closest = _coord;
+	var dist = MAP_W*MAP_H;
+	for(var i=0; i < MAP_W; i++) {
+		for(var j=0; j < MAP_H; j++) {
+			if validGridLocation([i,j]) {
+				if isOccupied([i,j]) and isPlayer([i,j]) == player {
+					if distance(_coord,[i,j]) < dist { 
+						dist = distance(_coord,[i,j]);
+						closest = [i,j];
 					}
 				}
 			}
 		}
-	}
-	_dist = MAP_W*MAP_W;
-	var _cell = [gx,gy];
-	for(var tx=0; tx<MAP_W; tx++) {
-		for(var ty=0; ty<MAP_H; ty++) {
-			with global.Mobs[# _coord[0],_coord[1]] {
-				if inSpeed([gx,gy],[tx,ty],spd) and distance([tx,ty],_dest) < _dist and not isOccupied([tx,ty]) {
-					_dist = distance([tx,ty],_dest);
-					_cell = [tx,ty];
-				}
-			}
-		}
-	}
-	moveMob(_coord,_cell);
+	}	
+	return closest;
 }
-function randomCell(_coord) {
-	var _dest = _coord;
-	with global.Mobs[# _coord[0],_coord[1]] {
-		_iter = 0;
-		while true {
-			if _iter >= 50 { break; }
-			var _x = irandom(MAP_W);
-			var _y = irandom(MAP_H);
-			if inSpeed(_coord,[_x,_y],spd) and not isOccupied([_x,_y]){ 
-				_dest=[_x,_y];
-				break;
-			}
-			_iter++;
-		}
+function getCellinRange(source,target,range) {
+	if distance(source,target) <= range {
+		return target;	
 	}
-	if not array_equals(_coord,_dest) { moveMob(_coord,_dest); }
+	var v = [target[0]-source[0],target[1]-source[1]];
+	v = [(v[0])/magnitude(v),v[1]/magnitude(v)];
+	v = [source[0]+round(v[0]*range),source[1]+round(v[1]*range)];
+	while isOccupied(v) {
+		range -= 0.25;
+		var v = [target[0]-source[0],target[1]-source[1]];
+		v = [(v[0])/magnitude(v),v[1]/magnitude(v)];
+		v = [source[0]+round(v[0]*range),source[1]+round(v[1]*range)];
+	}
+	return v;
+	
+}
+function randomCellInRange(_coord,range) {
+	var _x = irandom_range(_coord[0]-range,_coord[0]+range);
+	var _y = irandom_range(_coord[1]-range,_coord[1]+range)
+	var cell = [_x,_y];
+	return cell;
 }
 #endregion
-#region Enemy attack sets
-
-function closest(_coord) {
-	var _dist = MAP_H*MAP_W;
-	var _dest = [0,0];
-	for(var tx=0; tx<MAP_W; tx++) {
-		for(var ty=0; ty<MAP_H; ty++) {
-			if isPlayer([tx,ty]) {
-				var _mob = global.Mobs[# tx,ty];
-				with _mob {
-					if distance([tx,ty],_coord) < _dist {
-						_dist = distance([tx,ty],_coord);
-						_dest = [tx,ty];
-					}
-				}
-			}
-		}
-	}
-	if inSpeed(_coord,_dest,getRange(_coord)) {
-		attackMob(_coord,_dest);
-	}
-}

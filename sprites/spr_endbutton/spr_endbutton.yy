@@ -3,9 +3,9 @@
   "resourceVersion": "1.0",
   "name": "spr_endbutton",
   "bbox_bottom": 45,
-  "bbox_left": 1,
+  "bbox_left": 2,
   "bbox_right": 45,
-  "bbox_top": 1,
+  "bbox_top": 2,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eb9bf0a4-ca69-49a9-a499-2d8a8d8ef833",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1832cc51-724e-4b72-a615-0ebda4153d02",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 48,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5596cf51-39ee-4bc4-bca2-1cf5dfbac8aa","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e6b1ddef-bf79-4fd3-b25e-bb24ea35141e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eb9bf0a4-ca69-49a9-a499-2d8a8d8ef833","path":"sprites/spr_endbutton/spr_endbutton.yy",},},},"Disabled":false,"id":"cbcbaf91-3442-4e0c-b8f1-f7f5d8f6d161","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1832cc51-724e-4b72-a615-0ebda4153d02","path":"sprites/spr_endbutton/spr_endbutton.yy",},},},"Disabled":false,"id":"6efe5b62-389b-4480-88d3-baefcee4bc7f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

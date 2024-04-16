@@ -9,7 +9,7 @@ gx = -1;
 gy = -1;
 
 // Action points and other game controllers
-ap = 2;
+ap = MAX_AP;
 moved = false;
 attacked = false;
 healed = false;
@@ -22,7 +22,11 @@ reset = function() {
 	healed = false;
 }
 heal = function() {
-	ap--;
-	hp = clamp(hp+1,0,max_hp);
-	healed = true;
+	if hp != max_hp {
+		audio_play_sound(snd_heal, 2, false);
+		ap--;
+		hp = clamp(hp+1,0,max_hp);
+		healed = true;	
+		hitMarker(tileToRoomX(gx,gy),tileToRoomY(gx,gy),1)
+	}
 }

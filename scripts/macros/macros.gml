@@ -7,7 +7,7 @@
 #macro ROOM_W 384
 #macro ROOM_H 256
 
-#macro MAX_AP 3
+#macro MAX_AP 2
 
 enum TILE {
 	SPRITE = 0,

@@ -7,3 +7,18 @@ function distance(_coord1,_coord2){
 	var y2 = _coord2[1];
 	return sqrt(sqr(x2-x1)+sqr(y2-y1));
 }
+
+function angle(_coord1,_coord2){
+	return -1
+}
+
+function magnitude(v) {
+	return sqrt(sqr(v[0])+sqr(v[1]));	
+}
+
+function between(t,a,b) {
+	return (a <= t and b >= t);
+}
+function betweenE(t,a,b) {
+	return (a < t and b > t);	
+}
