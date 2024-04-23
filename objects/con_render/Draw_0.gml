@@ -21,7 +21,7 @@ if (room == rm_level_1 || room = rm_level_2) {
 				// DRAW TILE ALWAYS FIRST
 				draw_sprite(spr_block,_tileIndex-1,_screenX,_screenY-_tileZ);
 				if isBeingAttacked([tx,ty]) {
-					draw_sprite(spr_selection,4,_screenX,_screenY-_tileZ);
+					draw_sprite(spr_selection,4+array_equals(con_controller.hover,attackedBy([tx,ty])),_screenX,_screenY-_tileZ);
 				}
 				// Tile is selected
 				if not array_equals(con_controller.selected,[-1,-1]) {

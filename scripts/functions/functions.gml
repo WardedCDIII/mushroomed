@@ -113,16 +113,28 @@ function attackMob(attacker,target) {
 	}
 }
 function isBeingAttacked(_coord) {
-		with obj_enemy {
-			var size = ds_list_size(attackList);
-			for(var i=0; i<size; i++) {
-				if array_equals(ds_list_find_value(attackList,i),_coord) {
-					return true;	
-				}
+	with obj_enemy {
+		var size = ds_list_size(attackList);
+		for(var i=0; i<size; i++) {
+			if array_equals(ds_list_find_value(attackList,i),_coord) {
+				return true;	
 			}
 		}
+	}
 	return false;
 }
+function attackedBy(_coord) {
+	with obj_enemy {
+		var size = ds_list_size(attackList);
+		for(var i=0; i<size; i++) {
+			if array_equals(ds_list_find_value(attackList,i),_coord) {
+				return [gx,gy];	
+			}
+		}
+	}
+	return [-1,-1];
+}
+
 function getClosest(_coord,player) {
 	var closest = _coord;
 	var dist = MAP_W*MAP_H;
