@@ -50,7 +50,7 @@ if (room == rm_level_1 || room = rm_level_2) {
 						if isOccupied(selected) and not isOccupied(hover) {
 							if inSpeed(selected,hover,getSpeed(selected)) {
 								moveMob(selected,hover);
-								selected = [-1,-1];
+								selected = hover;
 							}
 						}
 					break;
@@ -64,14 +64,12 @@ if (room == rm_level_1 || room = rm_level_2) {
 								attackMob(selected,hover);
 								audio_play_sound(snd_hit, 2, false);
 							}
-							selected = [-1,-1];	
+							//selected = [-1,-1];	
 						}
 					break;
 				}
 				// move is valid and unobstructed
 			}
-		} else {
-			//selected = [-1,-1];
-		}
+		} 
 	}
 }
