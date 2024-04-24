@@ -1,20 +1,18 @@
-/// @description Enemy turn handling?
+/// @description Enemy attack
 
 var done = true;
 
 with obj_enemy {
-	if not attacked { attack(); }
-	sleep(250);
-	if not moved {
-		move();
+	if not attacked {
+		attack();
 		done = false;
 		break;
 	}
 }
-if not done {
+if not done { // continue
 	alarm[0] = 1;	
-} else {
-	alarm[1] = 1;	
+} else { // next phase
+	alarm[1] = room_speed*1.5;	
 }
 
 
