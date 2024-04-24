@@ -6,3 +6,4 @@ with obj_enemy {
 with obj_player {
 	reset();	
 }
+image_index = 0;
