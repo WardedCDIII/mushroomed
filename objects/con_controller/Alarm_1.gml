@@ -6,7 +6,9 @@ for(var tx=0; tx<MAP_W; tx++) {
 		if instance_exists(_mob) and not isPlayer([tx,ty]) {
 			with _mob {
 				if not attacked { attack(); }
-				if not moved { move(); }
+				if not moved { 
+					move();
+				}
 			}
 		}
 	}

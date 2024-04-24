@@ -1,3 +1,11 @@
+#region Global utility functions
+
+function sleep() {
+	var t = current_time + argument0;
+	while current_time < t {};
+}
+
+#endregion
 #region Convert grid coordinates to screen/room coordinates
 
 function tileToRoomX(_x,_y){

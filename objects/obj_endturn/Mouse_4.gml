@@ -1,4 +1,4 @@
-/// @description 
+/// @description Trigger enemy turn
 
-con_controller.alarm[0] = 1;
+alarm[0] = 1;
 
