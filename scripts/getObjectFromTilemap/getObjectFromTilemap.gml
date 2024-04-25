@@ -14,5 +14,9 @@ function getObjectFromTilemap(idx){
 			return obj_fly;
 		case 5:
 			return obj_frog;
+		case 6:
+			return obj_snail;
+		case 7:
+			return obj_pillbug;
 	}
 }
