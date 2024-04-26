@@ -36,6 +36,7 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"fnt_gameover_small","path":"fonts/fnt_gameover_small/fnt_gameover_small.yy",},},
     {"id":{"name":"spr_modes","path":"sprites/spr_modes/spr_modes.yy",},},
     {"id":{"name":"spr_gui_veiledlady","path":"sprites/spr_gui_veiledlady/spr_gui_veiledlady.yy",},},
     {"id":{"name":"tiles","path":"tilesets/tiles/tiles.yy",},},

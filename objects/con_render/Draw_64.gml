@@ -74,6 +74,10 @@ if (room == rm_level_1 || room == rm_level_2) {
 	draw_set_font(fnt_gameover);
 	if (won) {
 		draw_text(window_get_width() / 2, window_get_height() / 2, "You Win!");
+		if room == rm_level_1 {
+			draw_set_font(fnt_gameover_small);
+			draw_text(window_get_width()/2,window_get_height()/2+50, "Press Enter to Continue");	
+		}
 	} else if (lost) {
 		draw_text(window_get_width() / 2, window_get_height() / 2, "Game Over");
 	}
