@@ -162,6 +162,18 @@ function attackedBy(_coord) {
 	}
 	return [-1,-1];
 }
+function attackedNum() {
+	var count = 0;
+	with obj_enemy {
+		var size = ds_list_size(attackList);
+		for(var i=0; i<size; i++) {
+			if isOccupied(ds_list_find_value(attackList,i)) {
+				count++;
+			}
+		}
+	}
+	return count;
+}
 
 function getClosest(_coord,player) {
 	var closest = _coord;
