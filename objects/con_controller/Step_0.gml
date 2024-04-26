@@ -29,19 +29,22 @@ if (room == rm_level_1 || room = rm_level_2) {
 				if isOccupied(hover) {selected = hover;}	
 			}
 			// Clicked tile is same as selected tile
-			else if array_equals(hover,selected) {
-				if mode == 2 and isPlayer(hover){
-					with global.Mobs[# hover[0],hover[1]] {
-						if ap > 0 and not healed{
-							heal();
-						}
-					}
+			else if array_equals(hover,selected) and mode != 2 {
+				if isPlayer(hover){
+					selected = [-1,-1]	
 				}
-				selected = [-1,-1];
 			}
 			// Clicked tile is another player character
 			else if isPlayer(hover) {
-				selected = hover;	
+				// Healing
+				if mode == 2 {
+					var success = healMob(selected,hover);
+					if not success {
+						selected = hover;
+					}
+				} else {
+					selected = hover;
+				}
 			}
 			// Clicked tile is different than selected tile
 			else {

@@ -120,6 +120,26 @@ function attackMob(attacker,target) {
 		hitMarker(tileToRoomX(target[0],target[1]),tileToRoomY(target[0],target[1])-6,-1*atk);
 	}
 }
+function healMob(healer,target) {
+	var _mob = global.Mobs[# healer[0], healer[1]];
+	var _tar = global.Mobs[# target[0], target[1]];
+	with _mob {
+		var success = false;
+		if ap > 0 and not healed{
+			with _tar {
+				if hp < max_hp {
+					heal();	
+					success = true;
+				}
+			}
+			if success {
+				healed = true;
+				ap--;
+			}
+		}
+	}
+	return success;
+}
 function isBeingAttacked(_coord) {
 	with obj_enemy {
 		var size = ds_list_size(attackList);

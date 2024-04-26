@@ -27,7 +27,7 @@ if (room == rm_level_1 || room == rm_level_2) {
 	draw_text(5, 35, "Action Points:");
 	var y_action = 160;
 	repeat (remaining_action_points) {
-		draw_sprite(spr_actionpoint, 0, 10, y_action);
+		draw_sprite(spr_actionpoint, image_index/8, 10, y_action);
 		y_action -= 64;
 	}
 

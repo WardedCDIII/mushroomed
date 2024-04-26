@@ -2,6 +2,9 @@
 // Will return cell to move to, but will not move the mob
 // All moves take in _coord of enemy
 
+function stationary(_coord) {
+	return _coord	
+}
 function closestPlayer(_coord) {
 	var _closest = getClosest(_coord,true);
 	var _cell = getCellinRange(_coord,_closest,getSpeed(_coord));
