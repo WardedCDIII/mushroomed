@@ -5,4 +5,4 @@ atk = 2;
 spd = 3.75;
 range = 1.5;
 moveType = randomCell;
-attackType = circle;
+attackType = circleRand;

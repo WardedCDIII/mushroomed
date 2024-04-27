@@ -27,6 +27,10 @@ function randomCell(_coord) {
 // All attack sets take in _coord of enemy and list (to populate)
 // Return list, access other info through util
 
+function passive(_coord,list) {
+	ds_list_clear(list);
+	return list;
+}
 function rook(_coord,list) {
 	ds_list_clear(list);
 	var closest = getClosest(_coord,true);
