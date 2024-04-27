@@ -109,6 +109,7 @@ function moveMob(_coord1,_coord2) {
 function attackMob(attacker,target) {
 	var _mob = global.Mobs[# attacker[0], attacker[1]];
 	var _tar = global.Mobs[# target[0], target[1]];
+	if not isPlayer(attacker) and not isPlayer(target) { return 1; }
 	with _mob {
 		if ap > 0 {
 			with _tar {

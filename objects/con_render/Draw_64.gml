@@ -19,16 +19,16 @@ if (room == rm_level_1 || room == rm_level_2) {
 	// Draw the background of the GUI
 	draw_sprite_ext(spr_gui_background, 0, 0, 0, window_get_width() / sprite_get_width(spr_gui_background), window_get_height() / sprite_get_height(spr_gui_background), 0, c_white, 1);
 
-	// Display the score on the top right
-	draw_set_halign(fa_left);
-	draw_text(5, 5, "Score: " + string(player_score));
 
 	// Display the remaining turn points on the top left
-	draw_text(5, 35, "Action Points:");
-	var y_action = 160;
-	repeat (remaining_action_points) {
-		draw_sprite(spr_actionpoint, image_index/8, 10, y_action);
-		y_action -= 64;
+	if not array_equals(con_controller.selected,[-1,-1]) {
+		draw_set_halign(fa_left);
+		draw_text(5, 55, "Actions");
+		var y_action = 160;
+		repeat (remaining_action_points) {
+			draw_sprite(spr_actionpoint, image_index/8, 10, y_action);
+			y_action -= 64;
+		}
 	}
 
 	// Draw player team's names, icons, and healthbars
