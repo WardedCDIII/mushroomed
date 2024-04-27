@@ -3,7 +3,7 @@
 randomize();
 
 if (room == rm_level_1 || room = rm_level_2) {
-	audio_stop_sound(snd_splash_background);
+	audio_stop_all();
 	audio_play_sound(snd_background, 1, true);
 	
 	layer_set_visible("Mobs",false);
