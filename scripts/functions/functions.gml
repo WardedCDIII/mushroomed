@@ -1,3 +1,11 @@
+#region Global utility functions
+
+function sleep() {
+	var t = current_time + argument0;
+	while current_time < t {};
+}
+
+#endregion
 #region Convert grid coordinates to screen/room coordinates
 
 function tileToRoomX(_x,_y){
@@ -101,6 +109,7 @@ function moveMob(_coord1,_coord2) {
 function attackMob(attacker,target) {
 	var _mob = global.Mobs[# attacker[0], attacker[1]];
 	var _tar = global.Mobs[# target[0], target[1]];
+	if not isPlayer(attacker) and not isPlayer(target) { return 1; }
 	with _mob {
 		if ap > 0 {
 			with _tar {
@@ -112,17 +121,61 @@ function attackMob(attacker,target) {
 		hitMarker(tileToRoomX(target[0],target[1]),tileToRoomY(target[0],target[1])-6,-1*atk);
 	}
 }
-function isBeingAttacked(_coord) {
-		with obj_enemy {
-			var size = ds_list_size(attackList);
-			for(var i=0; i<size; i++) {
-				if array_equals(ds_list_find_value(attackList,i),_coord) {
-					return true;	
+function healMob(healer,target) {
+	var _mob = global.Mobs[# healer[0], healer[1]];
+	var _tar = global.Mobs[# target[0], target[1]];
+	with _mob {
+		var success = false;
+		if ap > 0 and not healed{
+			with _tar {
+				if hp < max_hp {
+					heal();	
+					success = true;
 				}
 			}
+			if success {
+				healed = true;
+				ap--;
+			}
 		}
+	}
+	return success;
+}
+function isBeingAttacked(_coord) {
+	with obj_enemy {
+		var size = ds_list_size(attackList);
+		for(var i=0; i<size; i++) {
+			if array_equals(ds_list_find_value(attackList,i),_coord) {
+				return true;	
+			}
+		}
+	}
 	return false;
 }
+function attackedBy(_coord) {
+	with obj_enemy {
+		var size = ds_list_size(attackList);
+		for(var i=0; i<size; i++) {
+			if array_equals(ds_list_find_value(attackList,i),_coord) {
+				return [gx,gy];	
+			}
+		}
+	}
+	return [-1,-1];
+}
+function attackedNum() {
+	var count = 0;
+	with obj_enemy {
+		var size = ds_list_size(attackList);
+		for(var i=0; i<size; i++) {
+			if isOccupied(ds_list_find_value(attackList,i)) {
+				count++;
+			}
+		}
+	}
+	return count;
+}
+
 function getClosest(_coord,player) {
 	var closest = _coord;
 	var dist = MAP_W*MAP_H;

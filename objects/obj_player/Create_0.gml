@@ -24,9 +24,7 @@ reset = function() {
 heal = function() {
 	if hp != max_hp {
 		audio_play_sound(snd_heal, 2, false);
-		ap--;
 		hp = clamp(hp+1,0,max_hp);
-		healed = true;	
 		hitMarker(tileToRoomX(gx,gy),tileToRoomY(gx,gy),1)
 	}
 }

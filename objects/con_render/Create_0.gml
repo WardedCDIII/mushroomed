@@ -1,9 +1,9 @@
 /// @description Create map
 
+lost = false; // If the player has lost the game
+won = false; // If the player has won the game
 if (room == rm_level_1 || room = rm_level_2) {
 	player_score = 0; // The score for the player
-	lost = false; // If the player has lost the game
-	won = false; // If the player has won the game
 
 	layer_set_visible("Map",false);
 	layer_set_visible("GUI",true);

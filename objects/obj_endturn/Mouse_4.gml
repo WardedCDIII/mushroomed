@@ -1,4 +1,8 @@
-/// @description 
+/// @description Trigger enemy turn
 
-con_controller.alarm[0] = 1;
+if image_index == 0 { 
+	audio_play_sound(snd_endturn,1,false);
+	image_index = 1;
+	alarm[0] = 1; 
+}
 

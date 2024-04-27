@@ -21,7 +21,7 @@ if (room == rm_level_1 || room = rm_level_2) {
 				// DRAW TILE ALWAYS FIRST
 				draw_sprite(spr_block,_tileIndex-1,_screenX,_screenY-_tileZ);
 				if isBeingAttacked([tx,ty]) {
-					draw_sprite(spr_selection,4,_screenX,_screenY-_tileZ);
+					draw_sprite(spr_selection,4+array_equals(con_controller.hover,attackedBy([tx,ty])),_screenX,_screenY-_tileZ);
 				}
 				// Tile is selected
 				if not array_equals(con_controller.selected,[-1,-1]) {
@@ -30,7 +30,7 @@ if (room == rm_level_1 || room = rm_level_2) {
 					if not isPlayer([tx,ty]) {
 						var atkd = false;
 						if instance_exists(global.Mobs[# con_controller.selected[0],con_controller.selected[1]]) {
-							with global.Mobs[# con_controller.selected[0],con_controller.selected[1]] { atkd = attacked; }
+							with global.Mobs[# con_controller.selected[0],con_controller.selected[1]] { atkd = attacked;}
 						}
 						if mode==0 and inSpeed(con_controller.selected,[tx,ty],getSpeed(con_controller.selected)) {
 							draw_sprite(spr_selection,1,_screenX,_screenY-_tileZ);	
@@ -38,7 +38,23 @@ if (room == rm_level_1 || room = rm_level_2) {
 						else if mode==1 and not atkd and inSpeed(con_controller.selected,[tx,ty],getRange(con_controller.selected)) {
 							draw_sprite(spr_selection,2,_screenX,_screenY-_tileZ);	
 						}
+					} else {
+						var hld = false;
+						var clst = [tx,ty];
+						with global.Mobs[# con_controller.selected[0],con_controller.selected[1]] {
+								hld = healed;
+						}
+						if mode == 2 {
+							var valid = false;
+							with global.Mobs[# tx,ty] {
+								valid = not healed and ap > 0 and hp < max_hp;
+							}
+							if valid {
+								draw_sprite(spr_selection,0,_screenX,_screenY-_tileZ);	
+							}
+						}	
 					}
+					
 				}
 				// Draw mob
 				if isOccupied([tx,ty]) {
