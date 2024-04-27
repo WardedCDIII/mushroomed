@@ -42,6 +42,11 @@ attack = function() {
 	}
 	attacked = true;
 }
+predictMove = function() {
+	var cell = moveType([gx,gy]);
+	if not isOccupied(cell) and moveType != randomCell { return cell; }
+	else { return [gx,gy]; }
+}
 
 
 
