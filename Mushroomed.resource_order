@@ -72,6 +72,7 @@
     {"name":"obj_hitmarker","order":11,"path":"objects/obj_hitmarker/obj_hitmarker.yy",},
     {"name":"snd_newturn","order":6,"path":"sounds/snd_newturn/snd_newturn.yy",},
     {"name":"spr_inkcap","order":9,"path":"sprites/spr_inkcap/spr_inkcap.yy",},
+    {"name":"snd_tutorial","order":8,"path":"sounds/snd_tutorial/snd_tutorial.yy",},
     {"name":"rm_level_2","order":2,"path":"rooms/rm_level_2/rm_level_2.yy",},
     {"name":"spr_tutorial","order":26,"path":"sprites/spr_tutorial/spr_tutorial.yy",},
     {"name":"spr_frog","order":16,"path":"sprites/spr_frog/spr_frog.yy",},

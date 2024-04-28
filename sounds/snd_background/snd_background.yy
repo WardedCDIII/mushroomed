@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 148.0359,
+  "duration": 96.0,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_background.mp3",
+  "soundFile": "snd_background.wav",
   "type": 0,
-  "volume": 0.45,
+  "volume": 0.8,
 }

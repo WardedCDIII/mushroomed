@@ -94,6 +94,7 @@
     {"id":{"name":"obj_hitmarker","path":"objects/obj_hitmarker/obj_hitmarker.yy",},},
     {"id":{"name":"snd_newturn","path":"sounds/snd_newturn/snd_newturn.yy",},},
     {"id":{"name":"spr_inkcap","path":"sprites/spr_inkcap/spr_inkcap.yy",},},
+    {"id":{"name":"snd_tutorial","path":"sounds/snd_tutorial/snd_tutorial.yy",},},
     {"id":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
     {"id":{"name":"spr_tutorial","path":"sprites/spr_tutorial/spr_tutorial.yy",},},
     {"id":{"name":"spr_frog","path":"sprites/spr_frog/spr_frog.yy",},},
