@@ -77,9 +77,13 @@ if (room == rm_level_1 || room == rm_level_2) {
 		if room == rm_level_1 {
 			draw_set_font(fnt_gameover_small);
 			draw_text(window_get_width()/2,window_get_height()/2+50, "Press Enter to Continue");	
+		} else {
+			room_goto_next();	
 		}
 	} else if (lost) {
 		draw_text(window_get_width() / 2, window_get_height() / 2, "Game Over");
+		draw_set_font(fnt_gameover_small);
+		draw_text(window_get_width()/2,window_get_height()/2+50, "Press R to restart");	
 	}
 
 	// Enemy health
