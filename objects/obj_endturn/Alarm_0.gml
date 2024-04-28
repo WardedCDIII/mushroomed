@@ -12,7 +12,7 @@ with obj_enemy {
 if not done { // continue
 	alarm[0] = 1;	
 } else { // next phase
-	alarm[1] = (room_speed*(3.5*attackedNum()>0))+1;	
+	alarm[1] = (room_speed*(1.25*(attackedNum()>0||instance_exists(obj_destroyAnim))))+1;	
 }
 
 

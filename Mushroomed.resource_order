@@ -73,6 +73,7 @@
     {"name":"spr_toadstool","order":10,"path":"sprites/spr_toadstool/spr_toadstool.yy",},
     {"name":"obj_hitmarker","order":11,"path":"objects/obj_hitmarker/obj_hitmarker.yy",},
     {"name":"snd_newturn","order":6,"path":"sounds/snd_newturn/snd_newturn.yy",},
+    {"name":"snd_move","order":10,"path":"sounds/snd_move/snd_move.yy",},
     {"name":"snd_victory","order":9,"path":"sounds/snd_victory/snd_victory.yy",},
     {"name":"spr_inkcap","order":9,"path":"sprites/spr_inkcap/spr_inkcap.yy",},
     {"name":"snd_tutorial","order":8,"path":"sounds/snd_tutorial/snd_tutorial.yy",},

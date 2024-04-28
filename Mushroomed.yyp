@@ -95,6 +95,7 @@
     {"id":{"name":"spr_toadstool","path":"sprites/spr_toadstool/spr_toadstool.yy",},},
     {"id":{"name":"obj_hitmarker","path":"objects/obj_hitmarker/obj_hitmarker.yy",},},
     {"id":{"name":"snd_newturn","path":"sounds/snd_newturn/snd_newturn.yy",},},
+    {"id":{"name":"snd_move","path":"sounds/snd_move/snd_move.yy",},},
     {"id":{"name":"snd_victory","path":"sounds/snd_victory/snd_victory.yy",},},
     {"id":{"name":"spr_inkcap","path":"sprites/spr_inkcap/spr_inkcap.yy",},},
     {"id":{"name":"snd_tutorial","path":"sounds/snd_tutorial/snd_tutorial.yy",},},
