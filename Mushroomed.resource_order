@@ -90,7 +90,6 @@
     {"name":"spr_health","order":18,"path":"sprites/spr_health/spr_health.yy",},
     {"name":"spr_pillbug","order":22,"path":"sprites/spr_pillbug/spr_pillbug.yy",},
     {"name":"spr_gui_background","order":3,"path":"sprites/spr_gui_background/spr_gui_background.yy",},
-    {"name":"snd_splash_background","order":3,"path":"sounds/snd_splash_background/snd_splash_background.yy",},
     {"name":"rm_victory","order":4,"path":"rooms/rm_victory/rm_victory.yy",},
     {"name":"hitMarker","order":6,"path":"scripts/hitMarker/hitMarker.yy",},
     {"name":"con_tutorial","order":14,"path":"objects/con_tutorial/con_tutorial.yy",},

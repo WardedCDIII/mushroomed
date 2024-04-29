@@ -114,7 +114,6 @@
     {"id":{"name":"spr_pillbug","path":"sprites/spr_pillbug/spr_pillbug.yy",},},
     {"id":{"name":"obj_inkcap","path":"objects/obj_inkcap/obj_inkcap.yy",},},
     {"id":{"name":"spr_gui_background","path":"sprites/spr_gui_background/spr_gui_background.yy",},},
-    {"id":{"name":"snd_splash_background","path":"sounds/snd_splash_background/snd_splash_background.yy",},},
     {"id":{"name":"rm_victory","path":"rooms/rm_victory/rm_victory.yy",},},
     {"id":{"name":"hitMarker","path":"scripts/hitMarker/hitMarker.yy",},},
     {"id":{"name":"con_tutorial","path":"objects/con_tutorial/con_tutorial.yy",},},

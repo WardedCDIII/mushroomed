@@ -47,5 +47,5 @@ if (room == rm_level_1 || room = rm_level_2) {
 	// Show debug text
 	show_debug = false;
 } else {
-	audio_play_sound(snd_splash_background, 1, true);
+	audio_play_sound(snd_tutorial, 1, true);
 }
